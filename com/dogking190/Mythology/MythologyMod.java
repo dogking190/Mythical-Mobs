@@ -47,7 +47,8 @@ public class MythologyMod {
 		@Override
 		public Item getTabIconItem() {
 			
-			return Items.apple;
+			return Item.getItemFromBlock(blockRubyOre);
+
 		}
 	};
 
@@ -55,29 +56,29 @@ public class MythologyMod {
 	public void PreLoad(FMLPreInitializationEvent event) {
 		
 		//Defines The Blocks in Minecraft
-		blockMithrilOre = new blockMithrilOre("blockMithrilOre", tabMythical, Material.rock);
-		blockSilverOre = new blockSilverOre("blockSilverOre", tabMythical, Material.rock);
-		blockBronzeOre = new blockBronzeOre("blockBronzeOre", tabMythical, Material.rock);
-		blockPlatinumOre = new blockPlatinumOre("blockPlatinumOre", tabMythical, Material.rock);
-		blockRubyOre = new blockRubyOre("blockRubyOre", tabMythical, Material.rock);
-		blockSapphireOre = new blockSapphireOre("blockSapphireOre" , tabMythical, Material.rock);
-		blockImperialGoldOre = new blockImperialGoldOre("blockImperialGoldOre", tabMythical, Material.rock);
-		blockCelestialBronzeOre = new blockCelestialBronzeOre("blockCelestialBronzeOre", tabMythical, Material.rock);
+		blockMithrilOre = new blockMithrilOre("oreMithril", tabMythical, Material.rock);
+		blockSilverOre = new blockSilverOre("oreSilver", tabMythical, Material.rock);
+		blockBronzeOre = new blockBronzeOre("oreBronze", tabMythical, Material.rock);
+		blockPlatinumOre = new blockPlatinumOre("orePlatinum", tabMythical, Material.rock);
+		blockRubyOre = new blockRubyOre("oreRuby", tabMythical, Material.rock);
+		blockSapphireOre = new blockSapphireOre("oreSapphire" , tabMythical, Material.rock);
+		blockImperialGoldOre = new blockImperialGoldOre("oreImperialGold", tabMythical, Material.rock);
+		blockCelestialBronzeOre = new blockCelestialBronzeOre("oreCelestialBronze", tabMythical, Material.rock);
 		blockMysticGrass = new blockMysticGrass("blockMysticGrass", tabMythical, Material.grass);
 		
 		//Adds Block into Minecraft
-		GameRegistry.registerBlock(blockMithrilOre, "blockMithrilOre");
-		GameRegistry.registerBlock(blockSilverOre, "blockSilverOre");
-		GameRegistry.registerBlock(blockBronzeOre, "blockBronzeOre");
-		GameRegistry.registerBlock(blockPlatinumOre, "blockPlatinumOre");
-		GameRegistry.registerBlock(blockRubyOre, "blockRubyOre");
-		GameRegistry.registerBlock(blockSapphireOre, "blockSapphireOre");
-		GameRegistry.registerBlock(blockImperialGoldOre, "blockImperialGoldOre");
-		GameRegistry.registerBlock(blockCelestialBronzeOre, "blockCelestialBronzeOre");
+		GameRegistry.registerBlock(blockMithrilOre, "oreMithril");
+		GameRegistry.registerBlock(blockSilverOre, "oreSilver");
+		GameRegistry.registerBlock(blockBronzeOre, "oreBronze");
+		GameRegistry.registerBlock(blockPlatinumOre, "orePlatinum");
+		GameRegistry.registerBlock(blockRubyOre, "oreRuby");
+		GameRegistry.registerBlock(blockSapphireOre, "oreSapphire");
+		GameRegistry.registerBlock(blockImperialGoldOre, "oreImperialGold");
+		GameRegistry.registerBlock(blockCelestialBronzeOre, "oreCelestialBronze");
 		GameRegistry.registerBlock(blockMysticGrass, "blockMysticGrass");
 		
 		//World Generator
-		GameRegistry.registerWorldGenerator(new MythicalWorldGen(), 1);
+		GameRegistry.registerWorldGenerator(new MythicalWorldGen(), 0);
 		
 		//Mob Registry
 		entityCentaurs.MainReg();
