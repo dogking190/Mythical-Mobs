@@ -3,6 +3,7 @@ package com.dogking190.Mythology;
 import com.dogking190.Mythology.mobs.entityCentaurs;
 import com.dogking190.Mythology.modBlocks.*;
 import com.dogking190.Mythology.proxy.CommonProxy;
+
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -16,6 +17,9 @@ import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
+import net.minecraft.item.Item.ToolMaterial;
+import net.minecraft.item.ItemSword;
+import net.minecraftforge.common.util.EnumHelper;
 
 @Mod(modid = MythologyMod.modid, name = MythologyMod.name, version = MythologyMod.version)
 public class MythologyMod {
@@ -41,7 +45,7 @@ public class MythologyMod {
 	public static Block blockCelestialBronzeOre;
 	public static Block blockMysticGrass;
 	public static Block blockMysticDirt;
-
+	
 
 
 	// Creative Tabs
@@ -54,6 +58,24 @@ public class MythologyMod {
 		}
 	};
 
+	
+		//Setting new toolmaterials
+			static ToolMaterial toolBronze = EnumHelper.addToolMaterial("bronze", 2, 341, 5.0F, 2.7F, 14);
+			static ToolMaterial toolCelestialBronze = EnumHelper.addToolMaterial("celestialbronze", 2, 453, 6.4F, 3F, 10);
+			static ToolMaterial toolImperialGold = EnumHelper.addToolMaterial("imperialgold", 2, 532, 8F, 5F, 10);
+			static ToolMaterial toolSilver = EnumHelper.addToolMaterial("silver", 2, 332, 5.8F, 4F, 14);
+
+		//My Tools temporary
+		public static Item swordBronze = new ItemSword(toolBronze).setUnlocalizedName("swordBronze").setCreativeTab(tabMythical).setTextureName(MythologyMod.modid + ":" + "swordBronze");
+		public static Item swordCelestialBronze = new ItemSword(toolCelestialBronze).setUnlocalizedName("swordCelestialBronze").setCreativeTab(tabMythical).setTextureName(MythologyMod.modid + ":" + "swordCelestialBronze");
+		public static Item swordImperialGold = new ItemSword(toolImperialGold).setUnlocalizedName("swordImperialGold").setCreativeTab(tabMythical).setTextureName(MythologyMod.modid + ":" + "swordImperialGold");
+		public static Item swordSilver = new ItemSword(toolSilver).setUnlocalizedName("swordSilver").setCreativeTab(tabMythical).setTextureName(MythologyMod.modid + ":" + "swordSilver");
+	 
+ 
+	
+
+
+	
 	@EventHandler
 	public void PreLoad(FMLPreInitializationEvent event) {
 		
@@ -70,7 +92,7 @@ public class MythologyMod {
 		blockMysticDirt = new blockMysticDirt("blockMysticDirt", tabMythical, Material.ground);
 
 		
-		//Adds Block into Minecraft
+		//Adds Blocks into Minecraft
 		GameRegistry.registerBlock(blockMithrilOre, "oreMithril");
 		GameRegistry.registerBlock(blockSilverOre, "oreSilver");
 		GameRegistry.registerBlock(blockBronzeOre, "oreBronze");
@@ -81,6 +103,12 @@ public class MythologyMod {
 		GameRegistry.registerBlock(blockCelestialBronzeOre, "oreCelestialBronze");
 		GameRegistry.registerBlock(blockMysticGrass, "blockMysticGrass");
 		GameRegistry.registerBlock(blockMysticDirt, "blockMysticDirt");
+		
+		//Adds Items into Minecraft
+    	GameRegistry.registerItem(swordBronze, "swordBronze"); 
+    	GameRegistry.registerItem(swordCelestialBronze, "swordCelestialBronze"); 
+    	GameRegistry.registerItem(swordImperialGold, "swordImperialGold"); 
+    	GameRegistry.registerItem(swordSilver, "swordSilver"); 
 
 		
 		//World Generator
