@@ -23,7 +23,7 @@ public class blockMithrilOre extends Block {
 		this.setBlockTextureName(m.modid + ":" + string);
 		this.setCreativeTab(tabMythical);
 		this.setHarvestLevel("Iron", 2);
-		this.setHardness(1.0F);
+		this.setHardness(3.0F);
 		this.setStepSound(soundTypeStone);
 	}
 
