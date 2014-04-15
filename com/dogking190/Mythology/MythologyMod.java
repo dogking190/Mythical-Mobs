@@ -45,7 +45,7 @@ public class MythologyMod {
 		@Override
 		public Item getTabIconItem() {
 			
-			return Items.apple;
+			return Item.getItemFromBlock(blockRubyOre);
 		}
 	};
 
