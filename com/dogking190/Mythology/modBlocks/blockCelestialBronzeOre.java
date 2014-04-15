@@ -1,15 +1,18 @@
 package com.dogking190.Mythology.modBlocks;
 
 import com.dogking190.Mythology.MythologyMod;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 
 public class blockCelestialBronzeOre extends Block {
 
+	MythologyMod m = new MythologyMod();
+
+	
 	public blockCelestialBronzeOre(String string, CreativeTabs tabMythical, Material rock) {
 		super(rock);
-		MythologyMod m = new MythologyMod();
 		this.setBlockName(string);
 		this.setBlockTextureName(m.modid + ":" + string);
 		this.setCreativeTab(tabMythical);

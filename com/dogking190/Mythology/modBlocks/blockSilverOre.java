@@ -7,10 +7,10 @@ import net.minecraft.creativetab.CreativeTabs;
 
 public class blockSilverOre extends Block {
 	
+	MythologyMod m = new MythologyMod();
 
 	public blockSilverOre(String string, CreativeTabs tabMythical, Material rock) {
 		super(rock);
-		MythologyMod m = new MythologyMod();
 		this.setBlockName(string);
 		this.setBlockTextureName(m.modid + ":" + string);
 		this.setCreativeTab(tabMythical);
