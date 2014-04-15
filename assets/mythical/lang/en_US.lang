@@ -1,0 +1,13 @@
+entity.mobCentaur.name=Centaurs
+tile.oreMithril.name=Mithril Ore
+tile.oreSilver.name=Silver Ore
+tile.oreBronze.name=Bronze Ore
+tile.orePlatinum.name=Platinum Ore
+tile.oreRuby.name=Ruby Ore
+tile.oreSapphire.name=Sapphire Ore
+tile.oreImperialGold.name=Imperial Gold Ore
+tile.oreCelestialBronze.name=Celestial Bronze Ore
+tile.blockMysticGrass.name=Mystic Grass
+tile.blockMysticDirt.name=Mystic Dirt
+item.itemScales.name=Scales
+items.itemFur.name=Fur

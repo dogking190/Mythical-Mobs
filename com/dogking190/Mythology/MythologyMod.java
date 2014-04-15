@@ -1,8 +1,27 @@
 package com.dogking190.Mythology;
 
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemFood;
+
 import com.dogking190.Mythology.mobs.entityCentaurs;
-import com.dogking190.Mythology.modBlocks.*;
+import com.dogking190.Mythology.modBlocks.blockBronzeOre;
+import com.dogking190.Mythology.modBlocks.blockCelestialBronzeOre;
+import com.dogking190.Mythology.modBlocks.blockImperialGoldOre;
+import com.dogking190.Mythology.modBlocks.blockMithrilOre;
+import com.dogking190.Mythology.modBlocks.blockMysticDirt;
+import com.dogking190.Mythology.modBlocks.blockMysticGrass;
+import com.dogking190.Mythology.modBlocks.blockPlatinumOre;
+import com.dogking190.Mythology.modBlocks.blockRubyOre;
+import com.dogking190.Mythology.modBlocks.blockSapphireOre;
+import com.dogking190.Mythology.modBlocks.blockSilverOre;
+import com.dogking190.Mythology.modItems.itemFur;
+import com.dogking190.Mythology.modItems.itemScales;
+import com.dogking190.Mythology.modItems.rawBehemothMeat;
 import com.dogking190.Mythology.proxy.CommonProxy;
+
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -11,11 +30,6 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
-import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.init.Items;
-import net.minecraft.item.Item;
 
 @Mod(modid = MythologyMod.modid, name = MythologyMod.name, version = MythologyMod.version)
 public class MythologyMod {
@@ -30,7 +44,7 @@ public class MythologyMod {
 	public static final String version = "1.0.0";
 	public static final String name = "Fantasies and Mythical";
 	
-	//My Mod Blocks
+	//Our Mod Blocks
 	public static Block blockMithrilOre;
 	public static Block blockSilverOre;
 	public static Block blockBronzeOre;
@@ -41,6 +55,12 @@ public class MythologyMod {
 	public static Block blockCelestialBronzeOre;
 	public static Block blockMysticGrass;
 	public static Block blockMysticDirt;
+	
+	//Our Mod Items
+	public static Item itemFur;
+	public static Item itemScales;
+	public static ItemFood rawBehemothMeat;
+	public static ItemFood cookBehemothMeat;
 
 
 
@@ -82,6 +102,11 @@ public class MythologyMod {
 		GameRegistry.registerBlock(blockMysticGrass, "blockMysticGrass");
 		GameRegistry.registerBlock(blockMysticDirt, "blockMysticDirt");
 
+		//Defines The Items in Minecraft
+		itemFur = new itemFur("itemFur", tabMythical);
+		itemScales = new itemScales("itemScales", tabMythical);
+		rawBehemothMeat = new rawBehemothMeat(4,0.4F,true, "rawBehemothMeat", tabMythical);
+		cookBehemothMeat = new cookBehemothMeat(8, 0.8F, true, "cookBehemothMeat", tabMythicl);
 		
 		//World Generator
 		GameRegistry.registerWorldGenerator(new MythicalWorldGen(), 0);

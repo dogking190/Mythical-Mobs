@@ -1,5 +1,7 @@
 package com.dogking190.Mythology.proxy;
 
+import net.minecraft.client.model.ModelCow;
+
 import com.dogking190.Mythology.mobs.entityCentaurs;
 import com.dogking190.Mythology.rendering.CentaurRender;
 
@@ -9,7 +11,7 @@ public class ClientProxy extends CommonProxy{
 
     public void RenderEntity(){
 
-        RenderingRegistry.registerEntityRenderingHandler(entityCentaurs.class , new CentaurRender());
+        RenderingRegistry.registerEntityRenderingHandler(entityCentaurs.class , new CentaurRender(new ModelCow(), 0F));
 
     }
 
