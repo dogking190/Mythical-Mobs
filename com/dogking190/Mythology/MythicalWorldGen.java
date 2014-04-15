@@ -36,6 +36,19 @@ public class MythicalWorldGen implements IWorldGenerator {
 
 	private void generateNether(Random random, int i, int j, World world) {
 
+		
+        
+
+	}
+
+	private void generateEnd(Random random, int i, int j, World world) {
+		// TODO Auto-generated method stub
+
+	}
+
+	private void generateSurface(Random random, int i, int j, World world) {
+		
+		
 		addOre(MythologyMod.blockMithrilOre, Blocks.stone, random, world, i, j, 5, 60, 5, 7, 20);
         addOre(MythologyMod.blockBronzeOre, Blocks.stone, random, world, i, j, 5, 60, 5, 7, 20);
         addOre(MythologyMod.blockCelestialBronzeOre, Blocks.stone, random, world, i, j, 5, 60, 5, 7, 20);
@@ -47,7 +60,7 @@ public class MythicalWorldGen implements IWorldGenerator {
 
 
 		
-		
+		/**
 		for(int a = 0; a < 90; a++)
         {
            int RandPosX = i + random.nextInt(16);
@@ -55,17 +68,7 @@ public class MythicalWorldGen implements IWorldGenerator {
            int RandPosZ = j + random.nextInt(16);
            (new WorldGenShrine()).generate(world, random, RandPosX, RandPosY, RandPosZ);
         }
-        
-
-	}
-
-	private void generateEnd(Random random, int i, int j, World world) {
-		// TODO Auto-generated method stub
-
-	}
-
-	private void generateSurface(Random random, int i, int j, World world) {
-		// TODO Auto-generated method stub
+        */
 
 	}
 

@@ -63,17 +63,17 @@ public class MythologyMod {
 		blockCelestialBronzeOre = new blockCelestialBronzeOre("oreCelestialBronze", tabMythical, Material.rock);
 		
 		//Adds Block into Minecraft
-		GameRegistry.registerBlock(blockMithrilOre, "blockMithrilOre");
-		GameRegistry.registerBlock(blockSilverOre, "blockSilverOre");
-		GameRegistry.registerBlock(blockBronzeOre, "blockBronzeOre");
-		GameRegistry.registerBlock(blockPlatinumOre, "blockPlatinumOre");
-		GameRegistry.registerBlock(blockRubyOre, "blockRubyOre");
-		GameRegistry.registerBlock(blockSapphireOre, "blockSapphireOre");
-		GameRegistry.registerBlock(blockImperialGoldOre, "blockImperialGoldOre");
-		GameRegistry.registerBlock(blockCelestialBronzeOre, "blockCelestialBronzeOre");
+		GameRegistry.registerBlock(blockMithrilOre, "oreMithril");
+		GameRegistry.registerBlock(blockSilverOre, "oreSilver");
+		GameRegistry.registerBlock(blockBronzeOre, "oreBronze");
+		GameRegistry.registerBlock(blockPlatinumOre, "orePlatinum");
+		GameRegistry.registerBlock(blockRubyOre, "oreRuby");
+		GameRegistry.registerBlock(blockSapphireOre, "oreSapphire");
+		GameRegistry.registerBlock(blockImperialGoldOre, "oreImperialGold");
+		GameRegistry.registerBlock(blockCelestialBronzeOre, "oreCelestialBronze");
 		
 		//World Generator
-		GameRegistry.registerWorldGenerator(new MythicalWorldGen(), 1);
+		GameRegistry.registerWorldGenerator(new MythicalWorldGen(), 0);
 		
 		//Mob Registry
 		entityCentaurs.MainReg();
