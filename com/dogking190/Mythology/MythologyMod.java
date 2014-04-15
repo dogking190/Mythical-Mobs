@@ -40,6 +40,8 @@ public class MythologyMod {
 	public static Block blockImperialGoldOre;
 	public static Block blockCelestialBronzeOre;
 	public static Block blockMysticGrass;
+	public static Block blockMysticDirt;
+
 
 
 	// Creative Tabs
@@ -65,6 +67,8 @@ public class MythologyMod {
 		blockImperialGoldOre = new blockImperialGoldOre("oreImperialGold", tabMythical, Material.rock);
 		blockCelestialBronzeOre = new blockCelestialBronzeOre("oreCelestialBronze", tabMythical, Material.rock);
 		blockMysticGrass = new blockMysticGrass("blockMysticGrass", tabMythical, Material.grass);
+		blockMysticDirt = new blockMysticDirt("blockMysticDirt", tabMythical, Material.ground);
+
 		
 		//Adds Block into Minecraft
 		GameRegistry.registerBlock(blockMithrilOre, "oreMithril");
@@ -76,6 +80,8 @@ public class MythologyMod {
 		GameRegistry.registerBlock(blockImperialGoldOre, "oreImperialGold");
 		GameRegistry.registerBlock(blockCelestialBronzeOre, "oreCelestialBronze");
 		GameRegistry.registerBlock(blockMysticGrass, "blockMysticGrass");
+		GameRegistry.registerBlock(blockMysticDirt, "blockMysticDirt");
+
 		
 		//World Generator
 		GameRegistry.registerWorldGenerator(new MythicalWorldGen(), 0);

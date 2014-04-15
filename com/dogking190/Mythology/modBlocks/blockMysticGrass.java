@@ -1,5 +1,7 @@
 package com.dogking190.Mythology.modBlocks;
 
+import java.util.Random;
+
 import scala.concurrent.BlockContext;
 
 import com.dogking190.Mythology.MythologyMod;
@@ -10,8 +12,11 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Blocks;
+import net.minecraft.item.Item;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
+import net.minecraft.world.World;
 
 public class blockMysticGrass extends Block {
 
@@ -28,26 +33,33 @@ public class blockMysticGrass extends Block {
 		super(grass);
 		this.setBlockName(string);
 		this.setCreativeTab(tabMythical);
-		this.setHarvestLevel("spade", 0);
+		this.setHarvestLevel("shovel", 0);
 		this.setHardness(0.6F);
 		this.setStepSound(soundTypeGrass);
+        this.setTickRandomly(true);
+
 	}
 	
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister iconRegister){
 		
 		this.blockIcon = iconRegister.registerIcon(m.modid + ":" + "blockMysticGrass_side");
-		this.iconBottom = iconRegister.registerIcon(m.modid + ":" + "blockMysticDirt");
 		this.iconTop = iconRegister.registerIcon(m.modid + ":" + "blockMysticGrass_top"); 
 		
 	}
-	
-	@SideOnly(Side.CLIENT)
-	public IIcon getIcon(int side, int metadata){
 
-			return side == 1 ? this.iconTop : (side == 0 ? this.iconBottom : side != metadata ? this.blockIcon : this.blockIcon);
-			
-	}
+	@SideOnly(Side.CLIENT)
+    public IIcon getIcon(int side, int metadata)
+    {
+        return side == 1 ? this.iconTop : (side == 0 ? m.blockMysticDirt.getBlockTextureFromSide(side) : this.blockIcon);
+    }
+	
+	 
+	 public Item getItemDropped(int i, Random k, int l)
+	    {
+	        return m.blockMysticDirt.getItemDropped(0, k, l);
+	    }
+
 	
 
 
