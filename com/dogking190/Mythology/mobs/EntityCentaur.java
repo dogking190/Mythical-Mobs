@@ -11,7 +11,7 @@ public class EntityCentaur extends EntityAnimal
 	
     public EntityCentaur(World par1World) {
         super(par1World);
-        this.setSize(1.0F, 1.0F);
+        this.setSize(1.2F, 2.45F);
         this.tasks.addTask(0, new EntityAIWander(this, 0.4));
     }
 

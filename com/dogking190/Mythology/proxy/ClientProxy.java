@@ -10,7 +10,7 @@ public class ClientProxy extends CommonProxy{
 
     public void RenderEntity(){
 
-        RenderingRegistry.registerEntityRenderingHandler(EntityCentaur.class , new CentaurRender(new ModelCentaur(), 0.5F));
+        RenderingRegistry.registerEntityRenderingHandler(EntityCentaur.class , new CentaurRender(new ModelCentaur(), 1.0F));
 
     }
 
