@@ -4,9 +4,11 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityList;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemPickaxe;
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 import net.minecraft.item.ItemTool;
 import net.minecraftforge.common.util.EnumHelper;
@@ -104,6 +106,13 @@ public class MythologyMod {
 		public static Item hoeCelestialBronze = new itemHoe(toolCelestialBronze).setUnlocalizedName("hoeCelestialBronze").setCreativeTab(tabMythical).setTextureName(MythologyMod.modid + ":" + "hoeCelestialBronze");
 		public static Item hoeImperialGold = new itemHoeIG(toolImperialGold).setUnlocalizedName("hoeImperialGold").setCreativeTab(tabMythical).setTextureName(MythologyMod.modid + ":" + "hoeImperialGold");
 		public static Item hoeSilver = new itemHoe(toolSilver).setUnlocalizedName("hoeSilver").setCreativeTab(tabMythical).setTextureName(MythologyMod.modid + ":" + "hoeSilver");
+		//My ingots
+		public static Item itemBronzeIngot = new Item().setUnlocalizedName("bronzeIngot").setCreativeTab(tabMythical).setTextureName("mythical" + ":" + "itemBronzeIngot");
+		public static Item itemCelestialBronzeIngot = new Item().setUnlocalizedName("celestialBronzeIngot").setCreativeTab(tabMythical).setTextureName("mythical" + ":" + "itemCelestialBronzeIngot");
+		public static Item itemImperialGoldIngot = new Item().setUnlocalizedName("imperialGoldIngot").setCreativeTab(tabMythical).setTextureName("mythical" + ":" + "itemImperialGoldIngot");
+		public static Item itemSilverIngot = new Item().setUnlocalizedName("silverIngot").setCreativeTab(tabMythical).setTextureName("mythical" + ":" + "itemSilverIngot");
+
+
  
 	
 
@@ -158,6 +167,48 @@ public class MythologyMod {
     	GameRegistry.registerItem(hoeCelestialBronze, "hoeCelestialBronze"); 
     	GameRegistry.registerItem(hoeImperialGold, "hoeImperialGold"); 
     	GameRegistry.registerItem(hoeSilver, "hoeSilver"); 
+    	GameRegistry.registerItem(itemBronzeIngot, "bronzeIngot"); 
+    	GameRegistry.registerItem(itemCelestialBronzeIngot, "celestialBronzeIngot"); 
+    	GameRegistry.registerItem(itemImperialGoldIngot, "imperialGoldIngot"); 
+    	GameRegistry.registerItem(itemSilverIngot, "silverIngot"); 
+    	
+    	//Smelting recipes
+		GameRegistry.addSmelting(blockBronzeOre, new ItemStack(itemBronzeIngot, 1), 0.7F);
+		GameRegistry.addSmelting(blockCelestialBronzeOre, new ItemStack(itemCelestialBronzeIngot, 1), 1.0F);
+		GameRegistry.addSmelting(blockImperialGoldOre, new ItemStack(itemImperialGoldIngot, 1), 1.0F);
+		GameRegistry.addSmelting(blockSilverOre, new ItemStack(itemSilverIngot, 1), 0.9F);
+		
+		//Crafting recipes
+		GameRegistry.addShapedRecipe(new ItemStack(swordBronze, 1), new Object[] { "I", "I", "S", 'I', itemBronzeIngot, 'S', Items.stick});
+		GameRegistry.addShapedRecipe(new ItemStack(pickaxeBronze, 1), new Object[] { "III", " S ", " S ", 'I', itemBronzeIngot, 'S', Items.stick });
+		GameRegistry.addShapedRecipe(new ItemStack(axeBronze, 1), new Object[] { "II", "IS", " S", 'I', itemBronzeIngot, 'S', Items.stick });
+		GameRegistry.addShapedRecipe(new ItemStack(hoeBronze, 1), new Object[] { "II", " S", " S", 'I', itemBronzeIngot, 'S', Items.stick });
+		GameRegistry.addShapedRecipe(new ItemStack(shovelBronze, 1), new Object[] { "I", "S", "S", 'I', itemBronzeIngot, 'S', Items.stick});
+		GameRegistry.addShapedRecipe(new ItemStack(swordCelestialBronze, 1), new Object[] { "I", "I", "S", 'I', itemCelestialBronzeIngot, 'S', Items.stick});
+		GameRegistry.addShapedRecipe(new ItemStack(pickaxeCelestialBronze, 1), new Object[] { "III", " S ", " S ", 'I', itemCelestialBronzeIngot, 'S', Items.stick });
+		GameRegistry.addShapedRecipe(new ItemStack(axeCelestialBronze, 1), new Object[] { "II", "IS", " S", 'I', itemCelestialBronzeIngot, 'S', Items.stick });
+		GameRegistry.addShapedRecipe(new ItemStack(hoeCelestialBronze, 1), new Object[] { "II", " S", " S", 'I', itemCelestialBronzeIngot, 'S', Items.stick });
+		GameRegistry.addShapedRecipe(new ItemStack(shovelCelestialBronze, 1), new Object[] { "I", "S", "S", 'I', itemCelestialBronzeIngot, 'S', Items.stick});
+		GameRegistry.addShapedRecipe(new ItemStack(swordImperialGold, 1), new Object[] { "I", "I", "S", 'I', itemImperialGoldIngot, 'S', Items.stick});
+		GameRegistry.addShapedRecipe(new ItemStack(pickaxeImperialGold, 1), new Object[] { "III", " S ", " S ", 'I', itemImperialGoldIngot, 'S', Items.stick });
+		GameRegistry.addShapedRecipe(new ItemStack(axeImperialGold, 1), new Object[] { "II", "IS", " S", 'I', itemImperialGoldIngot, 'S', Items.stick });
+		GameRegistry.addShapedRecipe(new ItemStack(hoeImperialGold, 1), new Object[] { "II", " S", " S", 'I', itemImperialGoldIngot, 'S', Items.stick });
+		GameRegistry.addShapedRecipe(new ItemStack(shovelImperialGold, 1), new Object[] { "I", "S", "S", 'I', itemImperialGoldIngot, 'S', Items.stick});
+		GameRegistry.addShapedRecipe(new ItemStack(swordSilver, 1), new Object[] { "I", "I", "S", 'I', itemSilverIngot, 'S', Items.stick});
+		GameRegistry.addShapedRecipe(new ItemStack(pickaxeSilver, 1), new Object[] { "III", " S ", " S ", 'I', itemSilverIngot, 'S', Items.stick });
+		GameRegistry.addShapedRecipe(new ItemStack(axeSilver, 1), new Object[] { "II", "IS", " S", 'I', itemSilverIngot, 'S', Items.stick });
+		GameRegistry.addShapedRecipe(new ItemStack(hoeSilver, 1), new Object[] { "II", " S", " S", 'I', itemSilverIngot, 'S', Items.stick });
+		GameRegistry.addShapedRecipe(new ItemStack(shovelSilver, 1), new Object[] { "I", "S", "S", 'I', itemSilverIngot, 'S', Items.stick});
+		
+
+
+
+		
+
+
+
+    	
+
 
 
 		
