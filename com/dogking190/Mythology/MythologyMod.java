@@ -1,7 +1,25 @@
 package com.dogking190.Mythology;
 
-import com.dogking190.Mythology.mobs.entityCentaurs;
-import com.dogking190.Mythology.modBlocks.*;
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.EntityList;
+import net.minecraft.item.Item;
+import net.minecraft.item.Item.ToolMaterial;
+import net.minecraft.item.ItemSword;
+import net.minecraftforge.common.util.EnumHelper;
+
+import com.dogking190.Mythology.mobs.EntityCentaur;
+import com.dogking190.Mythology.modBlocks.blockBronzeOre;
+import com.dogking190.Mythology.modBlocks.blockCelestialBronzeOre;
+import com.dogking190.Mythology.modBlocks.blockImperialGoldOre;
+import com.dogking190.Mythology.modBlocks.blockMithrilOre;
+import com.dogking190.Mythology.modBlocks.blockMysticDirt;
+import com.dogking190.Mythology.modBlocks.blockMysticGrass;
+import com.dogking190.Mythology.modBlocks.blockPlatinumOre;
+import com.dogking190.Mythology.modBlocks.blockRubyOre;
+import com.dogking190.Mythology.modBlocks.blockSapphireOre;
+import com.dogking190.Mythology.modBlocks.blockSilverOre;
 import com.dogking190.Mythology.proxy.CommonProxy;
 
 import cpw.mods.fml.common.Mod;
@@ -11,15 +29,8 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
-import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.init.Items;
-import net.minecraft.item.Item;
-import net.minecraft.item.Item.ToolMaterial;
-import net.minecraft.item.ItemSword;
-import net.minecraftforge.common.util.EnumHelper;
 
 @Mod(modid = MythologyMod.modid, name = MythologyMod.name, version = MythologyMod.version)
 public class MythologyMod {
@@ -115,7 +126,15 @@ public class MythologyMod {
 		GameRegistry.registerWorldGenerator(new MythicalWorldGen(), 0);
 		
 		//Mob Registry
-		entityCentaurs.MainReg();
+		int randomID = EntityRegistry.findGlobalUniqueEntityId();
+
+        EntityRegistry.registerGlobalEntityID(EntityCentaur.class , "mobCentaur", randomID);
+        EntityRegistry.registerModEntity(EntityCentaur.class, "mobCentaur", randomID, MythologyMod.m, 64, 1, true);
+        
+        EntityList.entityEggs.put(Integer.valueOf(randomID), new EntityList.EntityEggInfo(randomID, 0x1A33D6, 0x1AD63F));
+        
+        //Proxy
+        proxy.RenderEntity();
 
 	}
 
