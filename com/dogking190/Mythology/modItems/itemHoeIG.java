@@ -66,13 +66,21 @@ public class itemHoeIG extends Item
                 {
                 	
                 	par3World.setBlock(par4, par5, par6, block1);
+                	if(par3World.getBlock(par4 -1, par5, par6).equals(Blocks.grass) || par3World.getBlock(par4 -1, par5, par6).equals(Blocks.dirt))
                     par3World.setBlock(par4 -1, par5, par6, block1);
+                	if(par3World.getBlock(par4 +1, par5, par6).equals(Blocks.grass) || par3World.getBlock(par4 +1, par5, par6).equals(Blocks.dirt))
                     par3World.setBlock(par4 +1, par5, par6, block1);
+                	if(par3World.getBlock(par4, par5, par6 +1).equals(Blocks.grass) || par3World.getBlock(par4, par5, par6 +1).equals(Blocks.dirt))
                     par3World.setBlock(par4, par5, par6 +1, block1);
+                	if(par3World.getBlock(par4, par5, par6 -1).equals(Blocks.grass) || par3World.getBlock(par4, par5, par6 -1).equals(Blocks.dirt))
                     par3World.setBlock(par4, par5, par6 -1, block1);
+                	if(par3World.getBlock(par4 -1, par5, par6 -1).equals(Blocks.grass) || par3World.getBlock(par4 -1, par5, par6 -1).equals(Blocks.dirt))
                     par3World.setBlock(par4 -1, par5, par6 -1, block1);
+                	if(par3World.getBlock(par4 +1, par5, par6 +1).equals(Blocks.grass) || par3World.getBlock(par4 +1, par5, par6 +1).equals(Blocks.dirt))
                     par3World.setBlock(par4 +1, par5, par6 +1, block1);
+                	if(par3World.getBlock(par4 -1, par5, par6 +1).equals(Blocks.grass) || par3World.getBlock(par4 -1, par5, par6 +1).equals(Blocks.dirt))
                     par3World.setBlock(par4 -1, par5, par6 +1, block1);
+                	if(par3World.getBlock(par4 +1, par5, par6 -1).equals(Blocks.grass) || par3World.getBlock(par4 +1, par5, par6 -1).equals(Blocks.dirt))
                     par3World.setBlock(par4 +1, par5, par6 -1, block1);
 
 
