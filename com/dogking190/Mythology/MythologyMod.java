@@ -143,7 +143,14 @@ public class MythologyMod {
 		blockCelestialBronzeOre = new blockCelestialBronzeOre("oreCelestialBronze", tabMythical, Material.rock);
 		blockMysticGrass = new blockMysticGrass("blockMysticGrass", tabMythical, Material.grass);
 		blockMysticDirt = new blockMysticDirt("blockMysticDirt", tabMythical, Material.ground);
+		
 
+		//Defines The Items in Minecraft
+		itemFur = new itemFur("itemFur", tabMythical);
+		itemScales = new itemScales("itemDragonScale", tabMythical);
+		rawBehemothMeat = new rawBehemothMeat(4,0.4F,true, "itemBehemothMeat", tabMythical);
+		cookBehemothMeat = new cookBehemothMeat(8, 0.8F, true, "cookBehemothMeat", tabMythical);
+		itemGnomeBeard = new itemGnomeBeard("itemGnomeBeard", tabMythical);
 		
 		//Adds Blocks into Minecraft
 		GameRegistry.registerBlock(blockMithrilOre, "oreMithril");
@@ -183,6 +190,10 @@ public class MythologyMod {
     	GameRegistry.registerItem(itemImperialGoldIngot, "imperialGoldIngot"); 
     	GameRegistry.registerItem(itemSilverIngot, "silverIngot");
     	GameRegistry.registerItem(itemGnomeBeard, "gnomeBeard");
+    	GameRegistry.registerItem(itemScales, "dragonScales");
+    	GameRegistry.registerItem(rawBehemothMeat, "rawBehemothMeat");
+    	GameRegistry.registerItem(cookBehemothMeat, "cookBehemothMeat");
+
 
     	
     	//Smelting recipes
@@ -213,23 +224,6 @@ public class MythologyMod {
 		GameRegistry.addShapedRecipe(new ItemStack(hoeSilver, 1), new Object[] { "II", " S", " S", 'I', itemSilverIngot, 'S', Items.stick });
 		GameRegistry.addShapedRecipe(new ItemStack(shovelSilver, 1), new Object[] { "I", "S", "S", 'I', itemSilverIngot, 'S', Items.stick});
 		
-
-
-
-		
-
-
-
-    	
-
-
-
-		//Defines The Items in Minecraft
-		itemFur = new itemFur("itemFur", tabMythical);
-		itemScales = new itemScales("itemScales", tabMythical);
-		rawBehemothMeat = new rawBehemothMeat(4,0.4F,true, "rawBehemothMeat", tabMythical);
-		cookBehemothMeat = new cookBehemothMeat(8, 0.8F, true, "cookBehemothMeat", tabMythical);
-		itemGnomeBeard = new itemGnomeBeard("itemGnomeBeard", tabMythical);
 		//World Generator
 		GameRegistry.registerWorldGenerator(new MythicalWorldGen(), 0);
 		

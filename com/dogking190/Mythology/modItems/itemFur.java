@@ -7,12 +7,13 @@ import net.minecraft.item.Item;
 
 public class itemFur extends Item {
 	
+	MythologyMod m = new MythologyMod();
+	
 	public itemFur(String string, CreativeTabs tabMythical){
 		
-		MythologyMod m = new MythologyMod();
-		this.setUnlocalizedName(string)
-		.setCreativeTab(tabMythical)
-		.setTextureName(m.modid + ":" + string);
+		this.setUnlocalizedName(string);
+		this.setCreativeTab(tabMythical);
+		this.setTextureName(m.modid + ":" + string);
 		
 	}
 

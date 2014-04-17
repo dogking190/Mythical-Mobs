@@ -7,12 +7,13 @@ import net.minecraft.item.Item;
 
 public class itemGnomeBeard extends Item {
 	
-	public itemGnomeBeard(String string, CreativeTabs tabMythical){
+	MythologyMod m = new MythologyMod();
+	
+	public itemGnomeBeard(String string, CreativeTabs tab){
 		
-		MythologyMod m = new MythologyMod();
-		this.setUnlocalizedName(string)
-		.setCreativeTab(tabMythical)
-		.setTextureName(m.modid + ":" + string);
+		this.setUnlocalizedName(string);
+		this.setCreativeTab(tab);
+		this.setTextureName(m.modid + ":" + string);
 		
 	}
 
