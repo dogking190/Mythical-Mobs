@@ -34,6 +34,7 @@ import com.dogking190.Mythology.modItems.itemScales;
 import com.dogking190.Mythology.modItems.itemShovel;
 import com.dogking190.Mythology.modItems.rawBehemothMeat;
 import com.dogking190.Mythology.proxy.CommonProxy;
+import com.dogking190.Mythology.modItems.*;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
