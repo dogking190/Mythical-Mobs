@@ -1,4 +1,6 @@
-package com.dogking190.Mythology;
+package com.dogking190.Mythology.modItems;
+
+import com.dogking190.Mythology.MythologyMod;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemFood;
