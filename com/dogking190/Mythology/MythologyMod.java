@@ -75,6 +75,7 @@ public class MythologyMod {
 	public static Item itemScales;
 	public static ItemFood rawBehemothMeat;
 	public static ItemFood cookBehemothMeat;
+	public static Item itemGnomeBeard;
 
 
 	// Creative Tabs
@@ -179,7 +180,9 @@ public class MythologyMod {
     	GameRegistry.registerItem(itemBronzeIngot, "bronzeIngot"); 
     	GameRegistry.registerItem(itemCelestialBronzeIngot, "celestialBronzeIngot"); 
     	GameRegistry.registerItem(itemImperialGoldIngot, "imperialGoldIngot"); 
-    	GameRegistry.registerItem(itemSilverIngot, "silverIngot"); 
+    	GameRegistry.registerItem(itemSilverIngot, "silverIngot");
+    	GameRegistry.registerItem(itemGnomeBeard, "gnomeBeard");
+
     	
     	//Smelting recipes
 		GameRegistry.addSmelting(blockBronzeOre, new ItemStack(itemBronzeIngot, 1), 0.7F);
