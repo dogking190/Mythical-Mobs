@@ -228,7 +228,7 @@ public class MythologyMod {
 		itemScales = new itemScales("itemScales", tabMythical);
 		rawBehemothMeat = new rawBehemothMeat(4,0.4F,true, "rawBehemothMeat", tabMythical);
 		cookBehemothMeat = new cookBehemothMeat(8, 0.8F, true, "cookBehemothMeat", tabMythical);
-		
+		itemGnomeBeard = new itemGnomeBeard("itemGnomeBeard", tabMythical);
 		//World Generator
 		GameRegistry.registerWorldGenerator(new MythicalWorldGen(), 0);
 		
