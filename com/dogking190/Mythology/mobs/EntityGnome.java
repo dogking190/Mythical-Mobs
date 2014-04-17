@@ -11,7 +11,7 @@ public class EntityGnome extends EntityAnimal{
 	public EntityGnome(World par1World) {
 		super(par1World);
 		
-		this.setSize(0.5F, 0.1F);
+		this.setSize(0.6F, 1.5F);
         this.tasks.addTask(0, new EntityAIWander(this, 0.4));
 		
 	}
