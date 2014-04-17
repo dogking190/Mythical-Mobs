@@ -13,6 +13,7 @@ import net.minecraft.item.ItemSword;
 import net.minecraftforge.common.util.EnumHelper;
 
 import com.dogking190.Mythology.mobs.EntityCentaur;
+import com.dogking190.Mythology.mobs.EntityGnome;
 import com.dogking190.Mythology.modBlocks.blockBronzeOre;
 import com.dogking190.Mythology.modBlocks.blockCelestialBronzeOre;
 import com.dogking190.Mythology.modBlocks.blockImperialGoldOre;
@@ -228,13 +229,22 @@ public class MythologyMod {
 		//World Generator
 		GameRegistry.registerWorldGenerator(new MythicalWorldGen(), 0);
 		
-		//Mob Registry
+		//Mob ID Generator
 		int randomID = EntityRegistry.findGlobalUniqueEntityId();
 
+		//Mob Centaur Registry
         EntityRegistry.registerGlobalEntityID(EntityCentaur.class , "mobCentaur", randomID);
         EntityRegistry.registerModEntity(EntityCentaur.class, "mobCentaur", randomID, MythologyMod.m, 64, 1, true);
         
         EntityList.entityEggs.put(Integer.valueOf(randomID), new EntityList.EntityEggInfo(randomID, 0x1A33D6, 0x1AD63F));
+        
+        //Mob Gnome :) Registry
+        int randomIDGnome = EntityRegistry.findGlobalUniqueEntityId();
+        EntityRegistry.registerGlobalEntityID(EntityGnome.class , "mobGnome", randomIDGnome);
+        EntityRegistry.registerModEntity(EntityGnome.class, "mobGnome", randomIDGnome, MythologyMod.m, 64, 1, true);
+        
+        EntityList.entityEggs.put(Integer.valueOf(randomIDGnome), new EntityList.EntityEggInfo(randomIDGnome, 0xFC0A16, 0xFCFCFC));
+        
         
         //Proxy
         proxy.RenderEntity();
