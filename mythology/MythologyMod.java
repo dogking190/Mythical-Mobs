@@ -18,12 +18,14 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityList;
+import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
+import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraftforge.common.util.EnumHelper;
 
 
@@ -221,15 +223,17 @@ public class MythologyMod {
 		rawBehemothMeat = new RawBehemothMeat(4,0.4F,true, "rawBehemothMeat", tabMythical);
 		cookBehemothMeat = new CookBehemothMeat(8, 0.8F, true, "cookBehemothMeat", tabMythical);
 		itemGnomeBeard = new ItemGnomeBeard("itemGnomeBeard", tabMythical);
+		
+		
 		//World Generator
 		GameRegistry.registerWorldGenerator(new MythicalWorldGen(), 0);
 		
-		//Mob ID Generator
-		int randomID = EntityRegistry.findGlobalUniqueEntityId();
-
+		
 		//Mob Centaur Registry
+		int randomID = EntityRegistry.findGlobalUniqueEntityId();
         EntityRegistry.registerGlobalEntityID(EntityCentaur.class , "mobCentaur", randomID);
         EntityRegistry.registerModEntity(EntityCentaur.class, "mobCentaur", randomID, MythologyMod.m, 64, 1, true);
+        EntityRegistry.addSpawn(EntityCentaur.class, 1, 50, 200, EnumCreatureType.ambient, BiomeGenBase.plains);
         
         EntityList.entityEggs.put(Integer.valueOf(randomID), new EntityList.EntityEggInfo(randomID, 0x1A33D6, 0x1AD63F));
         

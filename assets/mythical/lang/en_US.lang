@@ -1,4 +1,8 @@
+//Mobs
 entity.mobCentaur.name=Centaurs
+entity.mobGnome.name=Gnome
+
+//Blocks
 tile.oreMithril.name=Mithril Ore
 tile.oreSilver.name=Silver Ore
 tile.oreBronze.name=Bronze Ore
@@ -9,5 +13,47 @@ tile.oreImperialGold.name=Imperial Gold Ore
 tile.oreCelestialBronze.name=Celestial Bronze Ore
 tile.blockMysticGrass.name=Mystic Grass
 tile.blockMysticDirt.name=Mystic Dirt
+
+//Items
 item.itemScales.name=Scales
-items.itemFur.name=Fur
+item.itemFur.name=Fur
+item.itemGnomeBeard.name=Gnome Beard
+
+//Ingots
+item.silverIngot.name=Silver Ingot
+item.imperialGoldIngot.name=Imperial Gold Ingot
+item.celestialBronzeIngot.name=Celestial Bronze Ingot
+item.bronzeIngot.name=Bronze Ingot
+
+//Hoes
+item.hoeSilver.name=Silver Hoe
+item.hoeImperialGold.name=Imperial Gold Hoe
+item.hoeCelestialBronze.name=Celestial Bronze Hoe
+item.hoeBronze.name=Bronze Hoe
+
+//Axes
+item.axeSilver.name=Silver Axe
+item.axeImperialGold.name=Imperial Gold Axe
+item.axeCelestialBronze.name=Celestial Bronze Axe
+item.axeBronze.name=Bronze Axe
+
+//Shovels
+item.shovelSilver.name=Silver Shovel
+item.shovelImperialGold.name=Imperial Gold Shovel
+item.shovelCelestialBronze.name=Celestial Bronze Shovel
+item.shovelBronze.name=Bronze Shovel
+
+//Pickaxes
+item.pickaxeSilver.name=Silver Pickaxe
+item.pickaxeImperialGold.name=Imperial Gold Pickaxe
+item.pickaxeCelestialBronze.name=Celestial Bronze Pickaxe
+item.pickaxeBronze.name=Bronze Pickaxe
+
+//Swords
+item.swordSilver.name=Silver Sword
+item.swordImperialGold.name=Imperial Gold Sword
+item.swordCelestialBronze.name=Celestial Bronze Sword
+item.swordBronze.name=Bronze Sword
+
+//Creative Tabs
+itemGroup.tabMythical=Mythical Creatures
