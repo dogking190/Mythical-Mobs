@@ -42,13 +42,13 @@ public class MythologyMod {
 	@Instance("mythical")
 	public static MythologyMod m;
 
-	@SidedProxy(clientSide = "com.dogking190.Mythology.proxy.ClientProxy", serverSide = "com.dogking190.Mythology.proxy.CommonProxy")
+	@SidedProxy(clientSide = "mythology.proxy.ClientProxy", serverSide = "mythology.proxy.CommonProxy")
 	public static CommonProxy proxy;
 
 	//Mod Info
 	public static final String modid = "mythical";
 	public static final String version = "1.0.0";
-	public static final String name = "Fantasies and Mythical";
+	public static final String name = "Mythical Creatures";
 	
 	//Our Mod Blocks
 	public static Block blockMithrilOre;
