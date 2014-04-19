@@ -1,6 +1,7 @@
 package mythology;
 
 import mythology.mobs.EntityCentaur;
+import mythology.mobs.EntityFairy;
 import mythology.mobs.EntityGnome;
 import mythology.mobs.EntityMinotaur;
 import mythology.modBlocks.BlockBronzeOre;
@@ -238,7 +239,7 @@ public class MythologyMod {
         
         EntityList.entityEggs.put(Integer.valueOf(randomID), new EntityList.EntityEggInfo(randomID, 0x1A33D6, 0x1AD63F));
         
-        //Mob Gnome :) Registry
+        //Mob Gnome :) Registry *Needs to be Scaled*
         int randomIDGnome = EntityRegistry.findGlobalUniqueEntityId();
         EntityRegistry.registerGlobalEntityID(EntityGnome.class , "mobGnome", randomIDGnome);
         EntityRegistry.registerModEntity(EntityGnome.class, "mobGnome", randomIDGnome, MythologyMod.m, 64, 1, true);
@@ -251,6 +252,13 @@ public class MythologyMod {
         EntityRegistry.registerModEntity(EntityMinotaur.class, "mobMinotaur", randomIDMinotaur, MythologyMod.m, 64, 1, true);
         
         EntityList.entityEggs.put(Integer.valueOf(randomIDMinotaur), new EntityList.EntityEggInfo(randomIDMinotaur, 0x835C3B, 0xD1D0CE));
+        
+        //Mob Fairy  *Needs to be Scaled*
+        int randomIDFairy = EntityRegistry.findGlobalUniqueEntityId();
+        EntityRegistry.registerGlobalEntityID(EntityFairy.class , "mobFairy", randomIDFairy);
+        EntityRegistry.registerModEntity(EntityFairy.class, "mboFairy", randomIDFairy, MythologyMod.m, 64, 1, true);
+        
+        EntityList.entityEggs.put(Integer.valueOf(randomIDFairy), new EntityList.EntityEggInfo(randomIDFairy, 0x07FA10, 0xE9F5E9));
         
         //Proxy
         proxy.RenderEntity();

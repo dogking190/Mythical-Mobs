@@ -1,6 +1,8 @@
 //Mobs
 entity.mobCentaur.name=Centaurs
 entity.mobGnome.name=Gnome
+entity.mobMinotaur.name=Minotaur
+entity.mobFairy.name=Fairy
 
 //Blocks
 tile.oreMithril.name=Mithril Ore
