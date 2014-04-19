@@ -139,6 +139,13 @@ public class MythologyMod {
 		blockMysticGrass = new BlockMysticGrass("blockMysticGrass", tabMythical, Material.grass);
 		blockMysticDirt = new BlockMysticDirt("blockMysticDirt", tabMythical, Material.ground);
 
+
+		//Defines The Items in Minecraft
+		itemFur = new ItemFur("itemFur", tabMythical);
+		itemScales = new ItemScales("itemScales", tabMythical);
+		rawBehemothMeat = new RawBehemothMeat(4,0.4F,true, "rawBehemothMeat", tabMythical);
+		cookBehemothMeat = new CookBehemothMeat(8, 0.8F, true, "cookBehemothMeat", tabMythical);
+		itemGnomeBeard = new ItemGnomeBeard("itemGnomeBeard", tabMythical);
 		
 		//Adds Blocks into Minecraft
 		GameRegistry.registerBlock(blockMithrilOre, "oreMithril");
@@ -177,7 +184,8 @@ public class MythologyMod {
     	GameRegistry.registerItem(itemCelestialBronzeIngot, "celestialBronzeIngot"); 
     	GameRegistry.registerItem(itemImperialGoldIngot, "imperialGoldIngot"); 
     	GameRegistry.registerItem(itemSilverIngot, "silverIngot");
-    	GameRegistry.registerItem(itemGnomeBeard, "gnomeBeard");
+    	GameRegistry.registerItem(itemGnomeBeard, "itemGnomeBeard");
+
 
     	
     	//Smelting recipes
@@ -210,21 +218,6 @@ public class MythologyMod {
 		
 
 
-
-		
-
-
-
-    	
-
-
-
-		//Defines The Items in Minecraft
-		itemFur = new ItemFur("itemFur", tabMythical);
-		itemScales = new ItemScales("itemScales", tabMythical);
-		rawBehemothMeat = new RawBehemothMeat(4,0.4F,true, "rawBehemothMeat", tabMythical);
-		cookBehemothMeat = new CookBehemothMeat(8, 0.8F, true, "cookBehemothMeat", tabMythical);
-		itemGnomeBeard = new ItemGnomeBeard("itemGnomeBeard", tabMythical);
 		
 		
 		//World Generator
