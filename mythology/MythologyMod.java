@@ -185,6 +185,11 @@ public class MythologyMod {
     	GameRegistry.registerItem(itemImperialGoldIngot, "imperialGoldIngot"); 
     	GameRegistry.registerItem(itemSilverIngot, "silverIngot");
     	GameRegistry.registerItem(itemGnomeBeard, "itemGnomeBeard");
+    	GameRegistry.registerItem(itemFur, "itemFur");
+    	GameRegistry.registerItem(rawBehemothMeat, "rawBehemothMeat");
+    	GameRegistry.registerItem(cookBehemothMeat, "cookBehemothMeat");
+    	GameRegistry.registerItem(itemScales, "itemScales");
+
 
 
     	
