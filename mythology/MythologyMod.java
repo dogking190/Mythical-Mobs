@@ -2,6 +2,7 @@ package mythology;
 
 import mythology.mobs.EntityCentaur;
 import mythology.mobs.EntityGnome;
+import mythology.mobs.EntityMinotaur;
 import mythology.modBlocks.BlockBronzeOre;
 import mythology.modBlocks.BlockCelestialBronzeOre;
 import mythology.modBlocks.BlockImperialGoldOre;
@@ -244,6 +245,12 @@ public class MythologyMod {
         
         EntityList.entityEggs.put(Integer.valueOf(randomIDGnome), new EntityList.EntityEggInfo(randomIDGnome, 0xFC0A16, 0xFCFCFC));
         
+		//Mob Minotaur Registry
+		int randomIDMinotaur = EntityRegistry.findGlobalUniqueEntityId();
+        EntityRegistry.registerGlobalEntityID(EntityMinotaur.class , "mobMinotaur", randomIDMinotaur);
+        EntityRegistry.registerModEntity(EntityMinotaur.class, "mobMinotaur", randomIDMinotaur, MythologyMod.m, 64, 1, true);
+        
+        EntityList.entityEggs.put(Integer.valueOf(randomIDMinotaur), new EntityList.EntityEggInfo(randomIDMinotaur, 0x835C3B, 0xD1D0CE));
         
         //Proxy
         proxy.RenderEntity();
