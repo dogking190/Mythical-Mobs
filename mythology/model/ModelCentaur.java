@@ -14,6 +14,7 @@ package mythology.model;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
+import net.minecraft.util.MathHelper;
 
 public class ModelCentaur extends ModelBase
 {
@@ -155,6 +156,11 @@ public class ModelCentaur extends ModelBase
   public void setRotationAngles(float f, float f1, float f2, float f3, float f4, float f5, Entity entity)
   {
     super.setRotationAngles(f, f1, f2, f3, f4, f5, entity);
+    
+    this.right_leg.rotateAngleX = MathHelper.cos(f * 0.6662F) * 1.4F * f1;
+    this.left_leg.rotateAngleX = MathHelper.cos(f * 0.6662F + (float)Math.PI) * 1.4F * f1;
+    this.left_leg_2.rotateAngleX= MathHelper.cos(f * 0.6662F + (float)Math.PI) * 1.4F * f1;
+    this.right_leg_2.rotateAngleX = MathHelper.cos(f * 0.6662F) * 1.4F * f1;
   }
 
 }

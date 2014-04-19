@@ -1,10 +1,13 @@
 package mythology.mobs;
 
 import net.minecraft.entity.EntityAgeable;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.EntityAIWander;
 import net.minecraft.entity.passive.EntityAnimal;
 import net.minecraft.world.World;
+
+import org.lwjgl.opengl.GL11;
 
 public class EntityGnome extends EntityAnimal{
 
@@ -22,6 +25,7 @@ public class EntityGnome extends EntityAnimal{
         return  true;
 
     }
+
 
     protected void applyEntityAttributes(){
 
