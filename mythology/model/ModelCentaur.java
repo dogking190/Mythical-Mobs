@@ -157,10 +157,12 @@ public class ModelCentaur extends ModelBase
   {
     super.setRotationAngles(f, f1, f2, f3, f4, f5, entity);
     
-    this.right_leg.rotateAngleX = MathHelper.cos(f * 0.6662F) * 1.4F * f1;
-    this.left_leg.rotateAngleX = MathHelper.cos(f * 0.6662F + (float)Math.PI) * 1.4F * f1;
-    this.left_leg_2.rotateAngleX= MathHelper.cos(f * 0.6662F + (float)Math.PI) * 1.4F * f1;
-    this.right_leg_2.rotateAngleX = MathHelper.cos(f * 0.6662F) * 1.4F * f1;
+    this.right_leg.rotateAngleX = MathHelper.cos(f * 0.6662F) * 0.6F * f1;
+    this.left_leg.rotateAngleX = MathHelper.cos(f * 0.6662F + (float)Math.PI) * 0.6F * f1;
+    this.left_leg_2.rotateAngleX= MathHelper.cos(f * 0.6662F + (float)Math.PI) * 0.6F * f1;
+    this.right_leg_2.rotateAngleX = MathHelper.cos(f * 0.6662F) * 0.6F * f1;
+    this.left_arm.rotateAngleX= MathHelper.cos(f * 0.6662F + (float)Math.PI) * 0.6F * f1;
+    this.right_arm.rotateAngleX = MathHelper.cos(f * 0.6662F) * 0.6F * f1;
   }
 
 }
