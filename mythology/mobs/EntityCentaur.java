@@ -23,7 +23,7 @@ public class EntityCentaur extends EntityAnimal
         this.setSize(1.2F, 2.45F);
         this.getNavigator().setAvoidsWater(true);
         this.tasks.addTask(0, new EntityAISwimming(this));
-        this.tasks.addTask(1, new EntityAIPanic(this, 2.0D));
+        this.tasks.addTask(1, new EntityAIPanic(this, 0.8D));
         this.tasks.addTask(2, new EntityAIMate(this, 1.0D));
         this.tasks.addTask(3, new EntityAITempt(this, 1.25D, Items.wheat, false));
         this.tasks.addTask(4, new EntityAIFollowParent(this, 1.25D));

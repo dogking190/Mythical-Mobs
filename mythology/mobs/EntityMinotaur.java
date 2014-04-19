@@ -3,10 +3,11 @@ package mythology.mobs;
 import net.minecraft.entity.EntityAgeable;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.EntityAIWander;
+import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.entity.passive.EntityAnimal;
 import net.minecraft.world.World;
 
-public class EntityMinotaur extends EntityAnimal
+public class EntityMinotaur extends EntityMob
 {
 	
     public EntityMinotaur(World par1World) {
@@ -30,14 +31,4 @@ public class EntityMinotaur extends EntityAnimal
         this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.4);
 
     }
-
-	@Override
-	public EntityAgeable createChild(EntityAgeable var1) 
-	{
-		
-		return new EntityMinotaur(worldObj);
-	}
-	
-	
-
 }
