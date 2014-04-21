@@ -10,6 +10,7 @@ public class EntityFairy extends EntityAnimal{
 	public EntityFairy(World par1World) {
 		super(par1World);
 		this.setSize(0.5F, 0.5F);
+		this.yOffset *= 6.0F;
 		
 	}
 	

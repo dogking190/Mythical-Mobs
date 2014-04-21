@@ -1,14 +1,14 @@
 package mythology;
 
-import cpw.mods.fml.common.IWorldGenerator;
-import mythology.world.WorldGenShrine;
+import java.util.Random;
+
+import mythology.world.GnomeVillage;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
-
-import java.util.Random;
+import cpw.mods.fml.common.IWorldGenerator;
 
 
 public class MythicalWorldGen implements IWorldGenerator {
@@ -60,15 +60,13 @@ public class MythicalWorldGen implements IWorldGenerator {
 
 
 		
-		/**
-		for(int a = 0; a < 90; a++)
+		for(int a = 0; a < 45; a++)
         {
            int RandPosX = i + random.nextInt(16);
            int RandPosY = random.nextInt(150);
            int RandPosZ = j + random.nextInt(16);
-           (new WorldGenShrine()).generate(world, random, RandPosX, RandPosY, RandPosZ);
+           (new GnomeVillage()).generate(world, random, RandPosX, RandPosY, RandPosZ);
         }
-        */
 
 	}
 

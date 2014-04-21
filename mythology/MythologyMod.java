@@ -235,7 +235,7 @@ public class MythologyMod {
 		int randomID = EntityRegistry.findGlobalUniqueEntityId();
         EntityRegistry.registerGlobalEntityID(EntityCentaur.class , "mobCentaur", randomID);
         EntityRegistry.registerModEntity(EntityCentaur.class, "mobCentaur", randomID, MythologyMod.m, 64, 1, true);
-        EntityRegistry.addSpawn(EntityCentaur.class, 1, 50, 200, EnumCreatureType.ambient, BiomeGenBase.plains);
+        EntityRegistry.addSpawn(EntityCentaur.class, 1, 50, 200, EnumCreatureType.creature, BiomeGenBase.plains);
         
         EntityList.entityEggs.put(Integer.valueOf(randomID), new EntityList.EntityEggInfo(randomID, 0x1A33D6, 0x1AD63F));
         
@@ -250,6 +250,7 @@ public class MythologyMod {
 		int randomIDMinotaur = EntityRegistry.findGlobalUniqueEntityId();
         EntityRegistry.registerGlobalEntityID(EntityMinotaur.class , "mobMinotaur", randomIDMinotaur);
         EntityRegistry.registerModEntity(EntityMinotaur.class, "mobMinotaur", randomIDMinotaur, MythologyMod.m, 64, 1, true);
+        EntityRegistry.addSpawn(EntityMinotaur.class, 1, 1, 5, EnumCreatureType.monster, BiomeGenBase.forest);
         
         EntityList.entityEggs.put(Integer.valueOf(randomIDMinotaur), new EntityList.EntityEggInfo(randomIDMinotaur, 0x835C3B, 0xD1D0CE));
         

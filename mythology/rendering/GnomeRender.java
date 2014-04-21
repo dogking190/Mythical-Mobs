@@ -29,6 +29,16 @@ public class GnomeRender extends RenderLiving
         super(par1ModelBase, par2);
     }
     
+    protected void preRenderScale(EntityGnome entity, float f)
+    {
+            GL11.glScalef(0.5F, 0.5F, 0.5F);
+    }
+
+    protected void preRenderCallback(EntityLiving entityliving, float f)
+    {
+            preRenderScale((EntityGnome)entityliving, f);
+    }
+    
     /**
      * Returns the location of an entity's texture. Doesn't seem to be called unless you call Render.bindEntityTexture.
      */
