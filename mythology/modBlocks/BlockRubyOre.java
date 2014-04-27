@@ -1,9 +1,12 @@
 package mythology.modBlocks;
 
+import java.util.Random;
+
 import mythology.MythologyMod;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
 
 
 public class BlockRubyOre extends Block {
@@ -19,5 +22,5 @@ public class BlockRubyOre extends Block {
 		this.setHardness(3.0F);
 		this.setStepSound(soundTypeStone);
 	}
-
+	
 }

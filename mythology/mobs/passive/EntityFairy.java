@@ -1,25 +1,20 @@
-package mythology.mobs;
+package mythology.mobs.passive;
 
 import net.minecraft.entity.EntityAgeable;
-import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.SharedMonsterAttributes;
-import net.minecraft.entity.ai.EntityAIWander;
 import net.minecraft.entity.passive.EntityAnimal;
 import net.minecraft.world.World;
 
-import org.lwjgl.opengl.GL11;
+public class EntityFairy extends EntityAnimal{
 
-public class EntityGnome extends EntityAnimal{
-
-	public EntityGnome(World par1World) {
+	public EntityFairy(World par1World) {
 		super(par1World);
-		
-		this.setSize(0.6F, 1.5F);
-        this.tasks.addTask(0, new EntityAIWander(this, 0.4));
+		this.setSize(0.5F, 0.5F);
+		this.yOffset *= 6.0F;
 		
 	}
 	
-    public boolean isAIEnabled(){
+	public boolean isAIEnabled(){
 
 
         return  true;
@@ -39,7 +34,7 @@ public class EntityGnome extends EntityAnimal{
 	@Override
 	public EntityAgeable createChild(EntityAgeable var1) {
 		
-		return new EntityGnome(worldObj);
+		return new EntityFairy(worldObj);
 	}
 
 }

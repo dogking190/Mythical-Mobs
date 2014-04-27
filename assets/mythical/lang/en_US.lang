@@ -16,16 +16,47 @@ tile.oreCelestialBronze.name=Celestial Bronze Ore
 tile.blockMysticGrass.name=Mystic Grass
 tile.blockMysticDirt.name=Mystic Dirt
 
+//armor
+item.bronzeHelmet.name=Bronze Helmet
+item.bronzeChestplate.name=Bronze Chestplate
+item.bronzeLeggings.name=Bronze Leggings
+item.bronzeBoots.name=Bronze Boots
+item.celestialBronzeHelmet.name=Celestial Bronze Helmet
+item.celestialBronzeChestplate.name=Celestial Bronze Chestplate
+item.celestialBronzeLeggings.name=Celestial Bronze Leggings
+item.celestialBronzeBoots.name=Celestial Bronze Boots
+item.imperialGoldHelmet.name=Imperial Gold Helmet
+item.imperialGoldChestplate.name=Imperial Gold Chestplate
+item.imperialGoldLeggings.name=Imperial Gold Leggings
+item.imperialGoldBoots.name=Imperial Gold Boots
+item.silverHelmet.name=Silver Helmet
+item.silverChestplate.name=Silver Chestplate
+item.silverLeggings.name=Silver Leggings
+item.silverBoots.name=Silver Boots
+item.mithrilHelmet.name=Mithril Helmet
+item.mithrilChestplate.name=Mithril Chestplate
+item.mithrilLeggings.name=Mithril Leggings
+item.mithrilBoots.name=Mithril Boots
+
 //Items
 item.itemScales.name=Scales
 item.itemFur.name=Fur
 item.itemGnomeBeard.name=Gnome Beard
+item.rawBehemothMeat.name=Raw Behemoth Meat
+item.cookBehemothMeat.name=Cooked Behemoth Meat
 
 //Ingots
 item.silverIngot.name=Silver Ingot
 item.imperialGoldIngot.name=Imperial Gold Ingot
 item.celestialBronzeIngot.name=Celestial Bronze Ingot
 item.bronzeIngot.name=Bronze Ingot
+
+//mithril shizzle
+item.mithrilIngot.name=Mithril Ingot
+item.mithrilNugget.name=Mithril Nugget
+item.mithrilChain.name=Mithril Chain Link
+item.mithrilMail.name=Mithril Chain Mail
+
 
 //Hoes
 item.hoeSilver.name=Silver Hoe

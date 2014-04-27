@@ -1,4 +1,4 @@
-package mythology.mobs;
+package mythology.mobs.hostile;
 
 import net.minecraft.entity.EntityAgeable;
 import net.minecraft.entity.SharedMonsterAttributes;

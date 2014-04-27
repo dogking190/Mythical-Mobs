@@ -1,17 +1,17 @@
 package mythology.proxy;
 
-import mythology.mobs.EntityCentaur;
-import mythology.mobs.EntityFairy;
-import mythology.mobs.EntityGnome;
-import mythology.mobs.EntityMinotaur;
-import mythology.model.ModelCentaur;
-import mythology.model.ModelFairy;
-import mythology.model.ModelGnome;
-import mythology.model.ModelMinotaur;
-import mythology.rendering.CentaurRender;
-import mythology.rendering.FairyRender;
-import mythology.rendering.GnomeRender;
-import mythology.rendering.MinotaurRender;
+import mythology.mobs.hostile.EntityCentaur;
+import mythology.mobs.hostile.EntityMinotaur;
+import mythology.mobs.passive.EntityFairy;
+import mythology.mobs.passive.EntityGnome;
+import mythology.model.hostile.ModelCentaur;
+import mythology.model.hostile.ModelMinotaur;
+import mythology.model.passive.ModelFairy;
+import mythology.model.passive.ModelGnome;
+import mythology.rendering.hostile.CentaurRender;
+import mythology.rendering.hostile.MinotaurRender;
+import mythology.rendering.passive.FairyRender;
+import mythology.rendering.passive.GnomeRender;
 import cpw.mods.fml.client.registry.RenderingRegistry;
 
 public class ClientProxy extends CommonProxy{

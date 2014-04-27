@@ -19,5 +19,6 @@ public class BlockSapphireOre extends Block {
 		this.setHardness(3.0F);
 		this.setStepSound(soundTypeStone);
 	}
-
+	
+	
 }

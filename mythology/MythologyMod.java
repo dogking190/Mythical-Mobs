@@ -1,21 +1,17 @@
 package mythology;
 
-import mythology.mobs.EntityCentaur;
-import mythology.mobs.EntityFairy;
-import mythology.mobs.EntityGnome;
-import mythology.mobs.EntityMinotaur;
-import mythology.modBlocks.BlockBronzeOre;
-import mythology.modBlocks.BlockCelestialBronzeOre;
-import mythology.modBlocks.BlockImperialGoldOre;
-import mythology.modBlocks.BlockMithrilOre;
-import mythology.modBlocks.BlockMysticDirt;
-import mythology.modBlocks.BlockMysticGrass;
-import mythology.modBlocks.BlockPlatinumOre;
-import mythology.modBlocks.BlockRubyOre;
-import mythology.modBlocks.BlockSapphireOre;
-import mythology.modBlocks.BlockSilverOre;
+import mythology.mobs.*;
+import mythology.hooks.*;
+import mythology.modArmor.*;
+import mythology.modBlocks.*;
 import mythology.modItems.*;
-import mythology.proxy.CommonProxy;
+import mythology.world.*;
+import mythology.proxy.*;
+import mythology.mobs.*;
+import mythology.mobs.hostile.EntityCentaur;
+import mythology.mobs.hostile.EntityMinotaur;
+import mythology.mobs.passive.EntityFairy;
+import mythology.mobs.passive.EntityGnome;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
@@ -24,13 +20,12 @@ import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
+import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraftforge.common.util.EnumHelper;
-
-
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -48,7 +43,37 @@ public class MythologyMod {
 
 	@SidedProxy(clientSide = "mythology.proxy.ClientProxy", serverSide = "mythology.proxy.CommonProxy")
 	public static CommonProxy proxy;
-
+	//armor ids (I looked everywhere, you need ids :/ ) 
+	//the syntax is id.material abbreviation.armor part abbreviation
+	private static int idBRH;
+	private static int idBRC;
+	private static int idBRL;
+	private static int idBRB;
+	private static int idCBH;
+	private static int idCBC;
+	private static int idCBL;
+	private static int idCBB;
+	private static int idIGH;
+	private static int idIGC;
+	private static int idIGL;
+	private static int idIGB;
+	private static int idSIH;
+	private static int idSIC;
+	private static int idSIL;
+	private static int idSIB;
+	private static int idSCH;
+	private static int idSCC;
+	private static int idSCL;
+	private static int idSCB;
+	private static int idFurH;
+	private static int idFurC;
+	private static int idFurL;
+	private static int idFurB;
+	private static int idMIH;
+	private static int idMIC;
+	private static int idMIL;
+	private static int idMIB;
+	
 	//Mod Info
 	public static final String modid = "mythical";
 	public static final String version = "1.0.0";
@@ -65,15 +90,19 @@ public class MythologyMod {
 	public static Block blockCelestialBronzeOre;
 	public static Block blockMysticGrass;
 	public static Block blockMysticDirt;
-	
+	public static Block blockSilverBlock;
+	public static Block blockBronzeBlock;
+	public static Block blockPlatinumBlock;
+	public static Block blockImperialGoldBlock;
+	public static Block blockCelestialBronzeBlock;
+		
 	//Our Mod Items
 	public static Item itemFur;
 	public static Item itemScales;
 	public static ItemFood rawBehemothMeat;
 	public static ItemFood cookBehemothMeat;
 	public static Item itemGnomeBeard;
-
-
+	
 	// Creative Tabs
 	public static CreativeTabs tabMythical = new CreativeTabs("tabMythical") {
 		@Override
@@ -83,14 +112,41 @@ public class MythologyMod {
 
 		}
 	};
-
 	
 		//Setting new toolmaterials
-			static ToolMaterial toolBronze = EnumHelper.addToolMaterial("bronze", 2, 341, 5.0F, 2F, 14);
-			static ToolMaterial toolCelestialBronze = EnumHelper.addToolMaterial("celestialbronze", 2, 453, 6.4F, 3F, 10);
-			static ToolMaterial toolImperialGold = EnumHelper.addToolMaterial("imperialgold", 2, 532, 8F, 5F, 10);
-			static ToolMaterial toolSilver = EnumHelper.addToolMaterial("silver", 2, 332, 5.8F, 4F, 14);
-
+		static ToolMaterial toolBronze = EnumHelper.addToolMaterial("bronze", 2, 341, 5.0F, 2F, 14);
+		static ToolMaterial toolCelestialBronze = EnumHelper.addToolMaterial("celestialbronze", 2, 453, 6.4F, 3F, 10);
+		static ToolMaterial toolImperialGold = EnumHelper.addToolMaterial("imperialgold", 2, 532, 8F, 5F, 10);
+		static ToolMaterial toolSilver = EnumHelper.addToolMaterial("silver", 2, 332, 5.8F, 4F, 14);
+		
+		//setting new armor materials
+		static ArmorMaterial armorBronze = EnumHelper.addArmorMaterial("armorBronze", 15, new int[]{2, 6, 5, 2}, 20);
+		static ArmorMaterial armorCelestialBronze = EnumHelper.addArmorMaterial("armorCelestialBronze", 25, new int[]{3, 6, 5, 3}, 9);
+		static ArmorMaterial armorImperialGold = EnumHelper.addArmorMaterial("armorImperialGold", 25, new int[]{3, 6, 5, 3}, 9);
+		static ArmorMaterial armorSilver = EnumHelper.addArmorMaterial("armorSilver", 20, new int[]{3, 6, 5, 2}, 20);
+		static ArmorMaterial armorMithril = EnumHelper.addArmorMaterial("armorMithril", 80, new int[]{3, 8, 6, 3}, 10);
+		//mythical armor
+		public static Item bronzeHelmet = new BronzeArmor(armorBronze, idBRH, 0).setUnlocalizedName("bronzeHelmet").setTextureName(MythologyMod.modid + ":" + "bronzeHelmet");
+		public static Item bronzeChestplate = new BronzeArmor(armorBronze, idBRC, 1).setUnlocalizedName("bronzeChestplate").setTextureName(MythologyMod.modid + ":" + "bronzeChestplate");
+		public static Item bronzeLeggings = new BronzeArmor(armorBronze, idBRL, 2).setUnlocalizedName("bronzeLeggings").setTextureName(MythologyMod.modid + ":" + "bronzeLeggings");
+		public static Item bronzeBoots = new BronzeArmor(armorBronze, idBRB, 3).setUnlocalizedName("bronzeBoots").setTextureName(MythologyMod.modid + ":" + "bronzeBoots");
+		public static Item celestialBronzeHelmet = new CelestialBronzeArmor(armorCelestialBronze, idCBH, 0).setUnlocalizedName("celestialBronzeHelmet").setTextureName(MythologyMod.modid + ":" + "celestialBronzeHelmet");
+		public static Item celestialBronzeChestplate = new CelestialBronzeArmor(armorCelestialBronze, idCBC, 1).setUnlocalizedName("celestialBronzeChestplate").setTextureName(MythologyMod.modid + ":" + "celestialBronzeChestplate");
+		public static Item celestialBronzeLeggings = new CelestialBronzeArmor(armorCelestialBronze, idCBL, 2).setUnlocalizedName("celestialBronzeLeggings").setTextureName(MythologyMod.modid + ":" + "celestialBronzeLeggings");
+		public static Item celestialBronzeBoots = new CelestialBronzeArmor(armorCelestialBronze, idCBB, 3).setUnlocalizedName("celestialBronzeBoots").setTextureName(MythologyMod.modid + ":" + "celestialBronzeBoots");
+		public static Item imperialGoldHelmet = new ImperialGoldArmor(armorImperialGold, idIGH, 0).setUnlocalizedName("imperialGoldHelmet").setTextureName(MythologyMod.modid + ":" + "imperialGoldHelmet");
+		public static Item imperialGoldChestplate = new ImperialGoldArmor(armorImperialGold, idIGC, 1).setUnlocalizedName("imperialGoldChestplate").setTextureName(MythologyMod.modid + ":" + "imperialGoldChestplate");
+		public static Item imperialGoldLeggings = new ImperialGoldArmor(armorImperialGold, idIGL, 2).setUnlocalizedName("imperialGoldLeggings").setTextureName(MythologyMod.modid + ":" + "imperialGoldLeggings");
+		public static Item imperialGoldBoots = new ImperialGoldArmor(armorImperialGold, idIGB, 3).setUnlocalizedName("imperialGoldBoots").setTextureName(MythologyMod.modid + ":" + "imperialGoldBoots");
+		public static Item silverHelmet = new SilverArmor(armorSilver, idSIH, 0).setUnlocalizedName("silverHelmet").setTextureName(MythologyMod.modid + ":" + "silverHelmet");
+		public static Item silverChestplate = new SilverArmor(armorSilver, idSIC, 1).setUnlocalizedName("silverChestplate").setTextureName(MythologyMod.modid + ":" + "silverChestplate");
+		public static Item silverLeggings = new SilverArmor(armorSilver, idSIL, 2).setUnlocalizedName("silverLeggings").setTextureName(MythologyMod.modid + ":" + "silverLeggings");
+		public static Item silverBoots = new SilverArmor(armorSilver, idSIB, 3).setUnlocalizedName("silverBoots").setTextureName(MythologyMod.modid + ":" + "silverBoots");
+		public static Item mithrilHelmet = new MithrilArmor(armorMithril, idMIH, 0).setUnlocalizedName("mithrilHelmet").setTextureName(MythologyMod.modid + ":" + "mithrilHelmet");
+		public static Item mithrilChestplate = new MithrilArmor(armorMithril, idMIC, 1).setUnlocalizedName("mithrilChestplate").setTextureName(MythologyMod.modid + ":" + "mithrilChestplate");
+		public static Item mithrilLeggings = new MithrilArmor(armorMithril, idMIL, 2).setUnlocalizedName("mithrilLeggings").setTextureName(MythologyMod.modid + ":" + "mithrilLeggings");
+		public static Item mithrilBoots = new MithrilArmor(armorMithril, idMIB, 3).setUnlocalizedName("mithrilBoots").setTextureName(MythologyMod.modid + ":" + "mithrilBoots");
+		
 		//My Tools temporary
 		public static Item swordBronze = new ItemSword(toolBronze).setUnlocalizedName("swordBronze").setCreativeTab(tabMythical).setTextureName(MythologyMod.modid + ":" + "swordBronze");
 		public static Item swordCelestialBronze = new ItemSword(toolCelestialBronze).setUnlocalizedName("swordCelestialBronze").setCreativeTab(tabMythical).setTextureName(MythologyMod.modid + ":" + "swordCelestialBronze");
@@ -117,9 +173,12 @@ public class MythologyMod {
 		public static Item itemCelestialBronzeIngot = new Item().setUnlocalizedName("celestialBronzeIngot").setCreativeTab(tabMythical).setTextureName("mythical" + ":" + "itemCelestialBronzeIngot");
 		public static Item itemImperialGoldIngot = new Item().setUnlocalizedName("imperialGoldIngot").setCreativeTab(tabMythical).setTextureName("mythical" + ":" + "itemImperialGoldIngot");
 		public static Item itemSilverIngot = new Item().setUnlocalizedName("silverIngot").setCreativeTab(tabMythical).setTextureName("mythical" + ":" + "itemSilverIngot");
-
-
- 
+		//mithril shizzle
+		public static Item itemMithrilIngot = new Item().setUnlocalizedName("mithrilIngot").setCreativeTab(tabMythical).setTextureName("mythical" + ":" + "itemMithrilIngot");
+		public static Item itemMithrilNugget = new Item().setUnlocalizedName("mithrilNugget").setCreativeTab(tabMythical).setTextureName("mythical" + ":" + "itemMithrilNugget");
+		public static Item itemMithrilChain = new Item().setUnlocalizedName("mithrilChain").setCreativeTab(tabMythical).setTextureName("mythical" + ":" + "itemMithrilChain");
+		public static Item itemMithrilMail = new Item().setUnlocalizedName("mithrilMail").setCreativeTab(tabMythical).setTextureName("mythical" + ":" + "itemMithrilMail");
+		
 	
 
 
@@ -146,7 +205,7 @@ public class MythologyMod {
 		rawBehemothMeat = new RawBehemothMeat(4,0.4F,true, "rawBehemothMeat", tabMythical);
 		cookBehemothMeat = new CookBehemothMeat(8, 0.8F, true, "cookBehemothMeat", tabMythical);
 		itemGnomeBeard = new ItemGnomeBeard("itemGnomeBeard", tabMythical);
-		
+		 
 		//Adds Blocks into Minecraft
 		GameRegistry.registerBlock(blockMithrilOre, "oreMithril");
 		GameRegistry.registerBlock(blockSilverOre, "oreSilver");
@@ -189,41 +248,30 @@ public class MythologyMod {
     	GameRegistry.registerItem(rawBehemothMeat, "rawBehemothMeat");
     	GameRegistry.registerItem(cookBehemothMeat, "cookBehemothMeat");
     	GameRegistry.registerItem(itemScales, "itemScales");
-
-
-
-    	
-    	//Smelting recipes
-		GameRegistry.addSmelting(blockBronzeOre, new ItemStack(itemBronzeIngot, 1), 0.7F);
-		GameRegistry.addSmelting(blockCelestialBronzeOre, new ItemStack(itemCelestialBronzeIngot, 1), 1.0F);
-		GameRegistry.addSmelting(blockImperialGoldOre, new ItemStack(itemImperialGoldIngot, 1), 1.0F);
-		GameRegistry.addSmelting(blockSilverOre, new ItemStack(itemSilverIngot, 1), 0.9F);
-		GameRegistry.addSmelting(rawBehemothMeat, new ItemStack(cookBehemothMeat, 1), 1.0F);
-
-		
-		//Crafting recipes
-		GameRegistry.addShapedRecipe(new ItemStack(swordBronze, 1), new Object[] { "I", "I", "S", 'I', itemBronzeIngot, 'S', Items.stick});
-		GameRegistry.addShapedRecipe(new ItemStack(pickaxeBronze, 1), new Object[] { "III", " S ", " S ", 'I', itemBronzeIngot, 'S', Items.stick });
-		GameRegistry.addShapedRecipe(new ItemStack(axeBronze, 1), new Object[] { "II", "IS", " S", 'I', itemBronzeIngot, 'S', Items.stick });
-		GameRegistry.addShapedRecipe(new ItemStack(hoeBronze, 1), new Object[] { "II", " S", " S", 'I', itemBronzeIngot, 'S', Items.stick });
-		GameRegistry.addShapedRecipe(new ItemStack(shovelBronze, 1), new Object[] { "I", "S", "S", 'I', itemBronzeIngot, 'S', Items.stick});
-		GameRegistry.addShapedRecipe(new ItemStack(swordCelestialBronze, 1), new Object[] { "I", "I", "S", 'I', itemCelestialBronzeIngot, 'S', Items.stick});
-		GameRegistry.addShapedRecipe(new ItemStack(pickaxeCelestialBronze, 1), new Object[] { "III", " S ", " S ", 'I', itemCelestialBronzeIngot, 'S', Items.stick });
-		GameRegistry.addShapedRecipe(new ItemStack(axeCelestialBronze, 1), new Object[] { "II", "IS", " S", 'I', itemCelestialBronzeIngot, 'S', Items.stick });
-		GameRegistry.addShapedRecipe(new ItemStack(hoeCelestialBronze, 1), new Object[] { "II", " S", " S", 'I', itemCelestialBronzeIngot, 'S', Items.stick });
-		GameRegistry.addShapedRecipe(new ItemStack(shovelCelestialBronze, 1), new Object[] { "I", "S", "S", 'I', itemCelestialBronzeIngot, 'S', Items.stick});
-		GameRegistry.addShapedRecipe(new ItemStack(swordImperialGold, 1), new Object[] { "I", "I", "S", 'I', itemImperialGoldIngot, 'S', Items.stick});
-		GameRegistry.addShapedRecipe(new ItemStack(pickaxeImperialGold, 1), new Object[] { "III", " S ", " S ", 'I', itemImperialGoldIngot, 'S', Items.stick });
-		GameRegistry.addShapedRecipe(new ItemStack(axeImperialGold, 1), new Object[] { "II", "IS", " S", 'I', itemImperialGoldIngot, 'S', Items.stick });
-		GameRegistry.addShapedRecipe(new ItemStack(hoeImperialGold, 1), new Object[] { "II", " S", " S", 'I', itemImperialGoldIngot, 'S', Items.stick });
-		GameRegistry.addShapedRecipe(new ItemStack(shovelImperialGold, 1), new Object[] { "I", "S", "S", 'I', itemImperialGoldIngot, 'S', Items.stick});
-		GameRegistry.addShapedRecipe(new ItemStack(swordSilver, 1), new Object[] { "I", "I", "S", 'I', itemSilverIngot, 'S', Items.stick});
-		GameRegistry.addShapedRecipe(new ItemStack(pickaxeSilver, 1), new Object[] { "III", " S ", " S ", 'I', itemSilverIngot, 'S', Items.stick });
-		GameRegistry.addShapedRecipe(new ItemStack(axeSilver, 1), new Object[] { "II", "IS", " S", 'I', itemSilverIngot, 'S', Items.stick });
-		GameRegistry.addShapedRecipe(new ItemStack(hoeSilver, 1), new Object[] { "II", " S", " S", 'I', itemSilverIngot, 'S', Items.stick });
-		GameRegistry.addShapedRecipe(new ItemStack(shovelSilver, 1), new Object[] { "I", "S", "S", 'I', itemSilverIngot, 'S', Items.stick});
-		
-
+    	GameRegistry.registerItem(bronzeHelmet, "bronzeHelmet");
+    	GameRegistry.registerItem(bronzeChestplate, "bronzeChestplate");
+    	GameRegistry.registerItem(bronzeLeggings, "bronzeLeggings");
+    	GameRegistry.registerItem(bronzeBoots, "bronzeBoots");
+    	GameRegistry.registerItem(celestialBronzeHelmet, "celestialBronzeHelmet");
+    	GameRegistry.registerItem(celestialBronzeChestplate, "celestialBronzeChestplate");
+    	GameRegistry.registerItem(celestialBronzeLeggings, "celestialBronzeLeggings");
+    	GameRegistry.registerItem(celestialBronzeBoots, "celestialBronzeBoots");
+    	GameRegistry.registerItem(imperialGoldHelmet, "imperialGoldHelmet");
+    	GameRegistry.registerItem(imperialGoldChestplate, "imperialGoldChestplate");
+    	GameRegistry.registerItem(imperialGoldLeggings, "imperialGoldLeggings");
+    	GameRegistry.registerItem(imperialGoldBoots, "imperialGoldBoots");
+    	GameRegistry.registerItem(silverHelmet, "silverHelmet");
+    	GameRegistry.registerItem(silverChestplate, "silverChestplate");
+    	GameRegistry.registerItem(silverLeggings, "silverLeggings");
+    	GameRegistry.registerItem(silverBoots, "silverBoots");
+    	GameRegistry.registerItem(mithrilHelmet, "mithrilHelmet");
+    	GameRegistry.registerItem(mithrilChestplate, "mithrilChestplate");
+    	GameRegistry.registerItem(mithrilLeggings, "mithrilLeggings");
+    	GameRegistry.registerItem(mithrilBoots, "mithrilBoots");
+    	GameRegistry.registerItem(itemMithrilIngot, "itemMithrilIngot");
+    	GameRegistry.registerItem(itemMithrilNugget, "itemMithrilNugget");
+    	GameRegistry.registerItem(itemMithrilChain, "itemMithrilChain");
+    	GameRegistry.registerItem(itemMithrilMail, "itemMithrilMail");
 
 		
 		
@@ -260,7 +308,8 @@ public class MythologyMod {
         EntityRegistry.registerModEntity(EntityFairy.class, "mboFairy", randomIDFairy, MythologyMod.m, 64, 1, true);
         
         EntityList.entityEggs.put(Integer.valueOf(randomIDFairy), new EntityList.EntityEggInfo(randomIDFairy, 0x07FA10, 0xE9F5E9));
-        
+        //recipes
+        MythicalRecipes.addMythicalRecipes();
         //Proxy
         proxy.RenderEntity();
 

@@ -1,16 +1,14 @@
-package mythology.rendering;
+package mythology.rendering.passive;
 
 import org.lwjgl.opengl.GL11;
 
-import mythology.mobs.EntityGnome;
+import mythology.mobs.passive.EntityGnome;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.util.ResourceLocation;
-
-
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 

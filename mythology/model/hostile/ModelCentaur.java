@@ -9,7 +9,7 @@
 
 
 
-package mythology.model;
+package mythology.model.hostile;
 
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;

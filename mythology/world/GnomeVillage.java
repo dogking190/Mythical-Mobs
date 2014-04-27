@@ -25,10 +25,10 @@ public class GnomeVillage extends WorldGenerator
 		int distanceToAir = 0;
 		Block checkID = world.getBlock(i, j, k);
 
-		while (checkID != null){
+		/*while (checkID != null){
 			distanceToAir++;
 			checkID = world.getBlock(i, j + distanceToAir, k);
-		}
+		}*/
 
 		if (distanceToAir > 3){
 			return false;
