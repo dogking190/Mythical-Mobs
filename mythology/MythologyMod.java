@@ -45,34 +45,34 @@ public class MythologyMod {
 	public static CommonProxy proxy;
 	//armor ids (I looked everywhere, you need ids :/ ) 
 	//the syntax is id.material abbreviation.armor part abbreviation
-	private static int idBRH;
-	private static int idBRC;
-	private static int idBRL;
-	private static int idBRB;
-	private static int idCBH;
-	private static int idCBC;
-	private static int idCBL;
-	private static int idCBB;
-	private static int idIGH;
-	private static int idIGC;
-	private static int idIGL;
-	private static int idIGB;
-	private static int idSIH;
-	private static int idSIC;
-	private static int idSIL;
-	private static int idSIB;
-	private static int idSCH;
-	private static int idSCC;
-	private static int idSCL;
-	private static int idSCB;
-	private static int idFurH;
-	private static int idFurC;
-	private static int idFurL;
-	private static int idFurB;
-	private static int idMIH;
-	private static int idMIC;
-	private static int idMIL;
-	private static int idMIB;
+	private static int idBRH = 4;
+	private static int idBRC = 4;
+	private static int idBRL = 4;
+	private static int idBRB = 4;
+	private static int idCBH = 4;
+	private static int idCBC = 4;
+	private static int idCBL = 4;
+	private static int idCBB = 4;
+	private static int idIGH = 4;
+	private static int idIGC = 4;
+	private static int idIGL = 4;
+	private static int idIGB = 4;
+	private static int idSIH = 4;
+	private static int idSIC = 4;
+	private static int idSIL = 4;
+	private static int idSIB = 4;
+	private static int idSCH = 4;
+	private static int idSCC = 4;
+	private static int idSCL = 4;
+	private static int idSCB = 4;
+	private static int idFurH = 4;
+	private static int idFurC = 4;
+	private static int idFurL = 4;
+	private static int idFurB = 4;
+	private static int idMIH = 4;
+	private static int idMIC = 4;
+	private static int idMIL = 4;
+	private static int idMIB = 4;
 	
 	//Mod Info
 	public static final String modid = "mythical";
@@ -130,18 +130,23 @@ public class MythologyMod {
 		public static Item bronzeChestplate = new BronzeArmor(armorBronze, idBRC, 1).setUnlocalizedName("bronzeChestplate").setTextureName(MythologyMod.modid + ":" + "bronzeChestplate");
 		public static Item bronzeLeggings = new BronzeArmor(armorBronze, idBRL, 2).setUnlocalizedName("bronzeLeggings").setTextureName(MythologyMod.modid + ":" + "bronzeLeggings");
 		public static Item bronzeBoots = new BronzeArmor(armorBronze, idBRB, 3).setUnlocalizedName("bronzeBoots").setTextureName(MythologyMod.modid + ":" + "bronzeBoots");
+		
+		// Celestial Bronze Armor
 		public static Item celestialBronzeHelmet = new CelestialBronzeArmor(armorCelestialBronze, idCBH, 0).setUnlocalizedName("celestialBronzeHelmet").setTextureName(MythologyMod.modid + ":" + "celestialBronzeHelmet");
 		public static Item celestialBronzeChestplate = new CelestialBronzeArmor(armorCelestialBronze, idCBC, 1).setUnlocalizedName("celestialBronzeChestplate").setTextureName(MythologyMod.modid + ":" + "celestialBronzeChestplate");
 		public static Item celestialBronzeLeggings = new CelestialBronzeArmor(armorCelestialBronze, idCBL, 2).setUnlocalizedName("celestialBronzeLeggings").setTextureName(MythologyMod.modid + ":" + "celestialBronzeLeggings");
 		public static Item celestialBronzeBoots = new CelestialBronzeArmor(armorCelestialBronze, idCBB, 3).setUnlocalizedName("celestialBronzeBoots").setTextureName(MythologyMod.modid + ":" + "celestialBronzeBoots");
+		
 		public static Item imperialGoldHelmet = new ImperialGoldArmor(armorImperialGold, idIGH, 0).setUnlocalizedName("imperialGoldHelmet").setTextureName(MythologyMod.modid + ":" + "imperialGoldHelmet");
 		public static Item imperialGoldChestplate = new ImperialGoldArmor(armorImperialGold, idIGC, 1).setUnlocalizedName("imperialGoldChestplate").setTextureName(MythologyMod.modid + ":" + "imperialGoldChestplate");
 		public static Item imperialGoldLeggings = new ImperialGoldArmor(armorImperialGold, idIGL, 2).setUnlocalizedName("imperialGoldLeggings").setTextureName(MythologyMod.modid + ":" + "imperialGoldLeggings");
 		public static Item imperialGoldBoots = new ImperialGoldArmor(armorImperialGold, idIGB, 3).setUnlocalizedName("imperialGoldBoots").setTextureName(MythologyMod.modid + ":" + "imperialGoldBoots");
+		
 		public static Item silverHelmet = new SilverArmor(armorSilver, idSIH, 0).setUnlocalizedName("silverHelmet").setTextureName(MythologyMod.modid + ":" + "silverHelmet");
 		public static Item silverChestplate = new SilverArmor(armorSilver, idSIC, 1).setUnlocalizedName("silverChestplate").setTextureName(MythologyMod.modid + ":" + "silverChestplate");
 		public static Item silverLeggings = new SilverArmor(armorSilver, idSIL, 2).setUnlocalizedName("silverLeggings").setTextureName(MythologyMod.modid + ":" + "silverLeggings");
 		public static Item silverBoots = new SilverArmor(armorSilver, idSIB, 3).setUnlocalizedName("silverBoots").setTextureName(MythologyMod.modid + ":" + "silverBoots");
+		
 		public static Item mithrilHelmet = new MithrilArmor(armorMithril, idMIH, 0).setUnlocalizedName("mithrilHelmet").setTextureName(MythologyMod.modid + ":" + "mithrilHelmet");
 		public static Item mithrilChestplate = new MithrilArmor(armorMithril, idMIC, 1).setUnlocalizedName("mithrilChestplate").setTextureName(MythologyMod.modid + ":" + "mithrilChestplate");
 		public static Item mithrilLeggings = new MithrilArmor(armorMithril, idMIL, 2).setUnlocalizedName("mithrilLeggings").setTextureName(MythologyMod.modid + ":" + "mithrilLeggings");
