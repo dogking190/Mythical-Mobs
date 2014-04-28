@@ -34,7 +34,7 @@ public class ModelCelestialBronzeArmor extends ModelBiped
   {
     textureWidth = 64;
     textureHeight = 32;
-    
+    	/*
       Shape1 = new ModelRenderer(this, 32, 0);
       Shape1.addBox(0F, 7F, 2F, 0, 5, 2);
       Shape1.setRotationPoint(2F, 12F, 0F);
@@ -47,6 +47,7 @@ public class ModelCelestialBronzeArmor extends ModelBiped
       Shape2.setTextureSize(64, 32);
       Shape2.mirror = true;
       setRotation(Shape2, 0F, 0F, 0F);
+      */
       head = new ModelRenderer(this, 0, 0);
       head.addBox(-4F, -8F, -4F, 8, 8, 8);
       head.setRotationPoint(0F, 0F, 0F);
@@ -83,6 +84,7 @@ public class ModelCelestialBronzeArmor extends ModelBiped
       leftleg.setTextureSize(64, 32);
       leftleg.mirror = true;
       setRotation(leftleg, 0F, 0F, 0F);
+      /*
       Shape3 = new ModelRenderer(this, 44, 0);
       Shape3.addBox(0F, -10F, -4F, 0, 2, 10);
       Shape3.setRotationPoint(0F, 0F, 0F);
@@ -101,29 +103,34 @@ public class ModelCelestialBronzeArmor extends ModelBiped
       Shape5.setTextureSize(64, 32);
       Shape5.mirror = true;
       setRotation(Shape5, 0F, 0F, 0F);
+      */
       
-      this.head.addChild(body);
-      this.leftarm.addChild(body);
-      this.rightarm.addChild(body);
-      this.leftleg.addChild(body);
-      this.leftleg.addChild(body);
+      this.bipedHead.addChild(head);
+      this.bipedLeftArm.addChild(leftarm);
+      this.bipedRightArm.addChild(rightarm);
+      this.bipedLeftLeg.addChild(leftleg);
+      this.bipedRightLeg.addChild(rightleg);
   }
   
   public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
   {
     super.render(entity, f, f1, f2, f3, f4, f5);
     setRotationAngles(f, f1, f2, f3, f4, f5, entity);
+    /*
     Shape1.render(f5);
     Shape2.render(f5);
+    */
     head.render(f5);
     body.render(f5);
     rightarm.render(f5);
     leftarm.render(f5);
     rightleg.render(f5);
     leftleg.render(f5);
+    /*
     Shape3.render(f5);
     Shape4.render(f5);
     Shape5.render(f5);
+  	*/
   }
   
   private void setRotation(ModelRenderer model, float x, float y, float z)
@@ -136,7 +143,7 @@ public class ModelCelestialBronzeArmor extends ModelBiped
   
   public ModelCelestialBronzeArmor(float f)
   {
-    super(f);
+    super(f, 0, 64,64);
   }
  
 }
