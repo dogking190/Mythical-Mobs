@@ -1,8 +1,10 @@
 package mythology.modArmor;
 
 import mythology.MythologyMod;
+import mythology.model.armor.ModelCelestialBronzeArmor;
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemArmor;
@@ -89,4 +91,10 @@ public class CelestialBronzeArmor extends ItemArmor implements ISpecialArmor{
 		
 	return null;
 	}
+	
+	public ModelBiped getArmorModel(EntityLiving entityLiving, ItemStack itemStack, int armorSlot){
+		
+		ModelCelestialBronzeArmor tutChest = new ModelCelestialBronzeArmor();
+		   return tutChest;
+		}
 }

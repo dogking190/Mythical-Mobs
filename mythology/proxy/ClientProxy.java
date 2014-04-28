@@ -31,8 +31,9 @@ public class ClientProxy extends CommonProxy{
         
     }
     
-    public static ModelBiped getArmorModel(int id){
+    //public static ModelBiped getArmorModel(int id){
 	
+    	/*
     	switch (id) {
 	    case 0:
 	    	return tutChest;	
@@ -41,8 +42,9 @@ public class ClientProxy extends CommonProxy{
 		default:
 	    	break;
     	}
+    	*/
     	
-		return tutChest;
-	}
+		//return tutChest;
+	//}
 
 }
