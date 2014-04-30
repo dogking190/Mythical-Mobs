@@ -4,7 +4,6 @@ import mythology.mobs.hostile.EntityCentaur;
 import mythology.mobs.hostile.EntityMinotaur;
 import mythology.mobs.passive.EntityFairy;
 import mythology.mobs.passive.EntityGnome;
-import mythology.model.armor.ModelCelestialBronzeArmor;
 import mythology.model.hostile.ModelCentaur;
 import mythology.model.hostile.ModelMinotaur;
 import mythology.model.passive.ModelFairy;
@@ -13,13 +12,9 @@ import mythology.rendering.hostile.CentaurRender;
 import mythology.rendering.hostile.MinotaurRender;
 import mythology.rendering.passive.FairyRender;
 import mythology.rendering.passive.GnomeRender;
-import net.minecraft.client.model.ModelBiped;
 import cpw.mods.fml.client.registry.RenderingRegistry;
 
 public class ClientProxy extends CommonProxy{
-
-	private static final ModelCelestialBronzeArmor tutChest = new ModelCelestialBronzeArmor();
-	private static final ModelCelestialBronzeArmor tutLegs = new ModelCelestialBronzeArmor();
 
     public void RenderEntity(){
 
@@ -30,21 +25,5 @@ public class ClientProxy extends CommonProxy{
 
         
     }
-    
-    //public static ModelBiped getArmorModel(int id){
-	
-    	/*
-    	switch (id) {
-	    case 0:
-	    	return tutChest;	
-	    case 1:
-	    	return tutLegs;
-		default:
-	    	break;
-    	}
-    	*/
-    	
-		//return tutChest;
-	//}
 
 }

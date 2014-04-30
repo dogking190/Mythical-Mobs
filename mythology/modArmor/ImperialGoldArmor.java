@@ -21,7 +21,7 @@ public class ImperialGoldArmor extends ItemArmor implements ISpecialArmor{
 	@Override
 	public ArmorProperties getProperties(EntityLivingBase player, ItemStack armor, DamageSource source, double damage, int slot) {
 	  if(source == source.inFire || source == source.lava || source == source.onFire) {
-		  return new ArmorProperties(1, 1, MathHelper.floor_double(damage * 7.5D));
+		  return new ArmorProperties(1, 1, MathHelper.floor_double(damage * 7.5D)); //the damage * double is the resistance to the damage above
 	  }
 	  return new ArmorProperties(0, 0, 0);
 	}
@@ -31,7 +31,7 @@ public class ImperialGoldArmor extends ItemArmor implements ISpecialArmor{
 	}
 	@Override
 	public void damageArmor(EntityLivingBase entity, ItemStack stack, DamageSource source, int damage, int slot) {
-		stack.damageItem(damage * 1, entity);
+		stack.damageItem(damage * 0, entity);
 	}
 
 	@Override

@@ -15,7 +15,10 @@ public class MythicalRecipes {
 		GameRegistry.addSmelting(m.blockSilverOre, new ItemStack(m.itemSilverIngot, 1), 0.9F);
 		GameRegistry.addSmelting(m.rawBehemothMeat, new ItemStack(m.cookBehemothMeat, 1), 1.0F);
 		GameRegistry.addSmelting(m.blockMithrilOre, new ItemStack(m.itemMithrilIngot, 1), 3.0F);
-				
+		GameRegistry.addSmelting(m.blockPlatinumOre, new ItemStack(m.itemPlatinumIngot, 1), 0.9F);
+		GameRegistry.addSmelting(m.blockRubyOre, new ItemStack(m.itemRuby, 2), 0.7F);
+		GameRegistry.addSmelting(m.blockSapphireOre, new ItemStack(m.itemRuby, 2), 0.7F);
+		
 		//Crafting recipes
 		GameRegistry.addShapedRecipe(new ItemStack(m.swordBronze, 1), new Object[] { "I", "I", "S", 'I', m.itemBronzeIngot, 'S', Items.stick});
 		GameRegistry.addShapedRecipe(new ItemStack(m.pickaxeBronze, 1), new Object[] { "III", " S ", " S ", 'I', m.itemBronzeIngot, 'S', Items.stick });
@@ -60,6 +63,23 @@ public class MythicalRecipes {
 		GameRegistry.addShapelessRecipe(new ItemStack(m.itemMithrilNugget, 9), new Object[]{new ItemStack(m.itemMithrilIngot)});
 		GameRegistry.addShapedRecipe(new ItemStack(m.itemMithrilChain, 3), new Object[] { " I ", "I I", " I ", 'I', m.itemMithrilNugget});
 		GameRegistry.addShapedRecipe(new ItemStack(m.itemMithrilMail, 1), new Object[] { "III", "III", "III", 'I', m.itemMithrilChain});
+		GameRegistry.addShapedRecipe(new ItemStack(m.blockBronzeBlock, 1), new Object[] { "III", "III", "III", 'I', m.itemBronzeIngot});
+		GameRegistry.addShapedRecipe(new ItemStack(m.blockCelestialBronzeBlock, 1), new Object[] { "III", "III", "III", 'I', m.itemCelestialBronzeIngot});
+		GameRegistry.addShapedRecipe(new ItemStack(m.blockImperialGoldBlock, 1), new Object[] { "III", "III", "III", 'I', m.itemImperialGoldIngot});
+		GameRegistry.addShapedRecipe(new ItemStack(m.blockPlatinumBlock, 1), new Object[] { "III", "III", "III", 'I', m.itemPlatinumIngot});
+		GameRegistry.addShapedRecipe(new ItemStack(m.blockSilverBlock, 1), new Object[] { "III", "III", "III", 'I', m.itemSilverIngot});
+		GameRegistry.addShapedRecipe(new ItemStack(m.blockRubyBlock, 1), new Object[] { "III", "III", "III", 'I', m.itemRuby});
+		GameRegistry.addShapedRecipe(new ItemStack(m.blockSapphireBlock, 1), new Object[] { "III", "III", "III", 'I', m.itemSapphire});
+		GameRegistry.addShapedRecipe(new ItemStack(m.swordRuby, 1), new Object[] { "I", "I", "S", 'I', m.itemRuby, 'S', Items.stick});
+		GameRegistry.addShapedRecipe(new ItemStack(m.pickaxeRuby, 1), new Object[] { "III", " S ", " S ", 'I', m.itemRuby, 'S', Items.stick });
+		GameRegistry.addShapedRecipe(new ItemStack(m.axeRuby, 1), new Object[] { "II", "IS", " S", 'I', m.itemRuby, 'S', Items.stick });
+		GameRegistry.addShapedRecipe(new ItemStack(m.hoeRuby, 1), new Object[] { "II", " S", " S", 'I', m.itemRuby, 'S', Items.stick });
+		GameRegistry.addShapedRecipe(new ItemStack(m.shovelRuby, 1), new Object[] { "I", "S", "S", 'I', m.itemRuby, 'S', Items.stick});
+		GameRegistry.addShapedRecipe(new ItemStack(m.swordSapphire, 1), new Object[] { "I", "I", "S", 'I', m.itemSapphire, 'S', Items.stick});
+		GameRegistry.addShapedRecipe(new ItemStack(m.pickaxeSapphire, 1), new Object[] { "III", " S ", " S ", 'I', m.itemSapphire, 'S', Items.stick });
+		GameRegistry.addShapedRecipe(new ItemStack(m.axeSapphire, 1), new Object[] { "II", "IS", " S", 'I', m.itemSapphire, 'S', Items.stick });
+		GameRegistry.addShapedRecipe(new ItemStack(m.hoeSapphire, 1), new Object[] { "II", " S", " S", 'I', m.itemSapphire, 'S', Items.stick });
+		GameRegistry.addShapedRecipe(new ItemStack(m.shovelSapphire, 1), new Object[] { "I", "S", "S", 'I', m.itemSapphire, 'S', Items.stick});
 		
 	}
 }

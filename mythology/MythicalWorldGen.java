@@ -64,7 +64,7 @@ public class MythicalWorldGen implements IWorldGenerator {
         addOre(MythologyMod.blockSilverOre, Blocks.stone, random, world, i, j, 5, 60, 5, 7, 20);
 
 		
-		for(int a = 0; a < 150; a++)
+		for(int a = 0; a < 45; a++)
         {
            int RandPosX = i + random.nextInt(16);
            int RandPosY = random.nextInt(150);

@@ -22,5 +22,10 @@ public class BlockRubyOre extends Block {
 		this.setHardness(3.0F);
 		this.setStepSound(soundTypeStone);
 	}
-	
+	@Override
+	public Item getItemDropped(int par1, Random par2, int par3)
+	{
+		return m.itemRuby;
+		
+	}
 }
