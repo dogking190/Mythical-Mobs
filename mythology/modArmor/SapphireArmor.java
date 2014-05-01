@@ -13,10 +13,10 @@ public class SapphireArmor extends ItemArmor{
 		this.setCreativeTab(m.tabMythical);
 	}
 	public String getArmorTexture(ItemStack armor, Entity entity, int slot, String type) {
-		if(armor.getItem() == m.bronzeLeggings) {
-			return "mythical:textures/models/armor/Bronze_armor_layer_2.png";
+		if(armor.getItem() == m.sapphireLeggings) {
+			return "mythical:textures/models/armor/Sapphire_armor_layer_2.png";
 		} else {
-			return "mythical:textures/models/armor/Bronze_armor_layer_1.png";
+			return "mythical:textures/models/armor/Sapphire_armor_layer_1.png";
 		}
 	}
 }

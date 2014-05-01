@@ -128,10 +128,10 @@ public class MythologyMod {
 		public static Item rubyChestplate = new RubyArmor(armorRuby, 4, 1).setUnlocalizedName("rubyChestplate").setTextureName(MythologyMod.modid + ":" + "rubyChestplate");
 		public static Item rubyLeggings = new RubyArmor(armorRuby, 4, 2).setUnlocalizedName("rubyLeggings").setTextureName(MythologyMod.modid + ":" + "rubyLeggings");
 		public static Item rubyBoots = new RubyArmor(armorRuby, 4, 3).setUnlocalizedName("rubyBoots").setTextureName(MythologyMod.modid + ":" + "rubyBoots");
-		public static Item sapphireHelmet = new SapphireArmor(armorRuby, 4, 0).setUnlocalizedName("sapphireHelmet").setTextureName(MythologyMod.modid + ":" + "sapphireHelmet");
-		public static Item sapphireChestplate = new SapphireArmor(armorRuby, 4, 1).setUnlocalizedName("sapphireChestplate").setTextureName(MythologyMod.modid + ":" + "sapphireChestplate");
-		public static Item sapphireLeggings = new SapphireArmor(armorRuby, 4, 2).setUnlocalizedName("sapphireLeggings").setTextureName(MythologyMod.modid + ":" + "sapphireLeggings");
-		public static Item sapphireBoots = new SapphireArmor(armorRuby, 4, 3).setUnlocalizedName("sapphireBoots").setTextureName(MythologyMod.modid + ":" + "sapphireBoots");
+		public static Item sapphireHelmet = new SapphireArmor(armorSapphire, 4, 0).setUnlocalizedName("sapphireHelmet").setTextureName(MythologyMod.modid + ":" + "sapphireHelmet");
+		public static Item sapphireChestplate = new SapphireArmor(armorSapphire, 4, 1).setUnlocalizedName("sapphireChestplate").setTextureName(MythologyMod.modid + ":" + "sapphireChestplate");
+		public static Item sapphireLeggings = new SapphireArmor(armorSapphire, 4, 2).setUnlocalizedName("sapphireLeggings").setTextureName(MythologyMod.modid + ":" + "sapphireLeggings");
+		public static Item sapphireBoots = new SapphireArmor(armorSapphire, 4, 3).setUnlocalizedName("sapphireBoots").setTextureName(MythologyMod.modid + ":" + "sapphireBoots");
 		
 		//My Tools temporary
 		public static Item swordBronze = new ItemSword(toolBronze).setUnlocalizedName("swordBronze").setCreativeTab(tabMythical).setTextureName(MythologyMod.modid + ":" + "swordBronze");
