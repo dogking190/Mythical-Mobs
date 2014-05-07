@@ -1,5 +1,7 @@
 package mythology.proxy;
 
+import net.minecraft.client.model.ModelBiped;
+
 public class CommonProxy {
 	
 	public void RenderEntity(){
@@ -7,4 +9,8 @@ public class CommonProxy {
 		
 	}
 
+	public static ModelBiped getArmorModel(int i) {
+		
+		return null;
+	}
 }

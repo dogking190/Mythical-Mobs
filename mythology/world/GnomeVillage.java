@@ -55,11 +55,16 @@ public class GnomeVillage extends WorldGenerator
 
 	public boolean generate(World world, Random rand, int i, int j, int k) {
 		//check that each corner is one of the valid spawn blocks
+		/*
 		if(!LocationIsValidSpawn(world, i, j, k) || !LocationIsValidSpawn(world, i + 56, j, k) || !LocationIsValidSpawn(world, i + 56, j, k + 74) || !LocationIsValidSpawn(world, i, j, k + 74))
 		{
 			return false;
 		}
-		
+		*/
+		if(world.getBlock(i, j, k)!= Blocks.grass || world.getBlock(i, j + 1, k) != Blocks.air)
+	      {
+	         return false;
+	      }
 		
 
 		world.setBlock(i + 0, j + 0, k + 0, Blocks.grass);
