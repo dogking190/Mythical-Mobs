@@ -1,0 +1,119 @@
+//Mobs
+entity.mobCentaur.name=Centaurs
+entity.mobGnome.name=Gnome
+entity.mobMinotaur.name=Minotaur
+entity.mobFairy.name=Fairy
+
+//Blocks
+tile.oreMithril.name=Mithril Ore
+tile.oreSilver.name=Silver Ore
+tile.oreBronze.name=Bronze Ore
+tile.orePlatinum.name=Platinum Ore
+tile.oreRuby.name=Ruby Ore
+tile.oreSapphire.name=Sapphire Ore
+tile.oreImperialGold.name=Imperial Gold Ore
+tile.oreCelestialBronze.name=Celestial Bronze Ore
+tile.blockMysticGrass.name=Mystic Grass
+tile.blockMysticDirt.name=Mystic Dirt
+tile.bronzeBlock.name=Bronze Block
+tile.celestialBronzeBlock.name=Celestial Bronze Block
+tile.imperialGoldBlock.name=Imperial Gold Block
+tile.platinumBlock.name=Platinum Block
+tile.silverBlock.name=Silver Block
+tile.rubyBlock.name=Ruby Block
+tile.sapphireBlock.name=Sapphire Block
+
+//armor
+item.bronzeHelmet.name=Bronze Helmet
+item.bronzeChestplate.name=Bronze Chestplate
+item.bronzeLeggings.name=Bronze Leggings
+item.bronzeBoots.name=Bronze Boots
+item.celestialBronzeHelmet.name=Celestial Bronze Helmet
+item.celestialBronzeChestplate.name=Celestial Bronze Chestplate
+item.celestialBronzeLeggings.name=Celestial Bronze Leggings
+item.celestialBronzeBoots.name=Celestial Bronze Boots
+item.imperialGoldHelmet.name=Imperial Gold Helmet
+item.imperialGoldChestplate.name=Imperial Gold Chestplate
+item.imperialGoldLeggings.name=Imperial Gold Leggings
+item.imperialGoldBoots.name=Imperial Gold Boots
+item.silverHelmet.name=Silver Helmet
+item.silverChestplate.name=Silver Chestplate
+item.silverLeggings.name=Silver Leggings
+item.silverBoots.name=Silver Boots
+item.mithrilHelmet.name=Mithril Helmet
+item.mithrilChestplate.name=Mithril Chestplate
+item.mithrilLeggings.name=Mithril Leggings
+item.mithrilBoots.name=Mithril Boots
+item.rubyHelmet.name=Ruby Helmet
+item.rubyChestplate.name=Ruby Chestplate
+item.rubyLeggings.name=Ruby Leggings
+item.rubyBoots.name=Ruby Boots
+item.sapphireHelmet.name=Sapphire Helmet
+item.sapphireChestplate.name=Sapphire Chestplate
+item.sapphireLeggings.name=Sapphire Leggings
+item.sapphireBoots.name=Sapphire Boots
+
+//Items
+item.itemScales.name=Scales
+item.itemFur.name=Fur
+item.itemGnomeBeard.name=Gnome Beard
+item.rawBehemothMeat.name=Raw Behemoth Meat
+item.cookBehemothMeat.name=Cooked Behemoth Meat
+
+//Ingots
+item.silverIngot.name=Silver Ingot
+item.imperialGoldIngot.name=Imperial Gold Ingot
+item.celestialBronzeIngot.name=Celestial Bronze Ingot
+item.bronzeIngot.name=Bronze Ingot
+item.platinumIngot.name=Platinum Ingot
+item.ruby.name=Ruby
+item.sapphire.name=Sapphire
+//mithril shizzle
+item.mithrilIngot.name=Mithril Ingot
+item.mithrilNugget.name=Mithril Nugget
+item.mithrilChain.name=Mithril Chain Link
+item.mithrilMail.name=Mithril Chain Mail
+
+
+//Hoes
+item.hoeSilver.name=Silver Hoe
+item.hoeImperialGold.name=Imperial Gold Hoe
+item.hoeCelestialBronze.name=Celestial Bronze Hoe
+item.hoeBronze.name=Bronze Hoe
+item.hoeRuby.name=Ruby Hoe
+item.hoeSapphire.name=Sapphire Hoe
+
+//Axes
+item.axeSilver.name=Silver Axe
+item.axeImperialGold.name=Imperial Gold Axe
+item.axeCelestialBronze.name=Celestial Bronze Axe
+item.axeBronze.name=Bronze Axe
+item.axeRuby.name=Ruby Axe
+item.axeSapphire.name=Sapphire Axe
+
+//Shovels
+item.shovelSilver.name=Silver Shovel
+item.shovelImperialGold.name=Imperial Gold Shovel
+item.shovelCelestialBronze.name=Celestial Bronze Shovel
+item.shovelBronze.name=Bronze Shovel
+item.shovelRuby.name=Ruby Shovel
+item.shovelSapphire.name=Sapphire Shovel
+
+//Pickaxes
+item.pickaxeSilver.name=Silver Pickaxe
+item.pickaxeImperialGold.name=Imperial Gold Pickaxe
+item.pickaxeCelestialBronze.name=Celestial Bronze Pickaxe
+item.pickaxeBronze.name=Bronze Pickaxe
+item.pickaxeRuby.name=Ruby Pickaxe
+item.pickaxeSapphire.name=Sapphire Pickaxe
+
+//Swords
+item.swordSilver.name=Silver Sword
+item.swordImperialGold.name=Imperial Gold Sword
+item.swordCelestialBronze.name=Celestial Bronze Sword
+item.swordBronze.name=Bronze Sword
+item.swordRuby.name=Ruby Sword
+item.swordSapphire.name=Sapphire Sword
+
+//Creative Tabs
+itemGroup.tabMythical=Mythical Creatures
