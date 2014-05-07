@@ -8,7 +8,6 @@ import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.biome.BiomeGenDesert;
-import net.minecraft.world.biome.BiomeGenHills;
 import net.minecraft.world.biome.BiomeGenOcean;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
@@ -63,14 +62,27 @@ public class MythicalWorldGen implements IWorldGenerator {
         addOre(MythologyMod.blockSapphireOre, Blocks.stone, random, world, i, j, 5, 60, 5, 7, 20);
         addOre(MythologyMod.blockSilverOre, Blocks.stone, random, world, i, j, 5, 60, 5, 7, 20);
 
-		
-		for(int a = 0; a < 45; a++)
-        {
-           int RandPosX = i + random.nextInt(16);
-           int RandPosY = random.nextInt(150);
-           int RandPosZ = j + random.nextInt(16);
-           (new GnomeVillage()).generate(world, random, RandPosX, RandPosY, RandPosZ);
-        }
+		BiomeGenBase biome = world.getBiomeGenForCoords(i, j);
+		if(biome.biomeID == 1){
+			
+			if(random.nextInt(5) == 1){
+				
+				for(int a =0; a < 1; a++){
+					int RandPosX = i + random.nextInt(16);
+					int RandPosY = random.nextInt(150);
+					int RandPosZ = j + random.nextInt(16);
+					(new GnomeVillage()).generate(world, random, RandPosX, RandPosY, RandPosZ);
+				}
+			
+			}
+		}
+			
+			/*
+			for(int a = 0; a < 45; a++)
+	        {
+	          
+	        }
+	        */
 
 	}
 
