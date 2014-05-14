@@ -6,16 +6,16 @@ import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 
 
-public class BlockBronzeOre extends Block {
+public class BlockTinOre extends Block {
 	
 	MythologyMod m = new MythologyMod();
 
-	public BlockBronzeOre(String string, CreativeTabs tabMythical, Material rock) {
+	public BlockTinOre(String string, CreativeTabs tabMythical, Material rock) {
 		super(rock);
 		this.setBlockName(string);
 		this.setBlockTextureName(m.modid + ":" + string);
 		this.setCreativeTab(tabMythical);
-		this.setHarvestLevel("Iron", 2);
+		this.setHarvestLevel("pickaxe", 1);
 		this.setHardness(3.0F);
 		this.setStepSound(soundTypeStone);
 	}

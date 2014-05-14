@@ -53,7 +53,9 @@ public class MythicalWorldGen implements IWorldGenerator {
 		
 		
 		addOre(MythologyMod.blockMithrilOre, Blocks.stone, random, world, i, j, 1, 15, 1, 4, 5);
-        addOre(MythologyMod.blockBronzeOre, Blocks.stone, random, world, i, j, 5, 60, 5, 7, 20);
+        addOre(MythologyMod.blockCopperOre, Blocks.stone, random, world, i, j, 5, 60, 5, 7, 20);
+        addOre(MythologyMod.blockZincOre, Blocks.stone, random, world, i, j, 5, 60, 5, 7, 20);
+        addOre(MythologyMod.blockTinOre, Blocks.stone, random, world, i, j, 5, 60, 5, 7, 20);
         addOceanOre(MythologyMod.blockCelestialBronzeOre, Blocks.gravel, random, world, i, j, 5, 64, 3, 5, 10);
         addDesertOre(MythologyMod.blockImperialGoldOre, Blocks.stone, random, world, i, j, 5, 100, 5, 7, 10);
         addOceanOre(MythologyMod.blockCelestialBronzeOre, Blocks.stone, random, world, i, j, 5, 64, 3, 5, 10);

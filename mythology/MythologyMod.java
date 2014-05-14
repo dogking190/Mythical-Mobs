@@ -50,9 +50,11 @@ public class MythologyMod {
 	public static final String name = "Mythical Creatures";
 	
 	//Our Mod Blocks
+	public static Block blockZincOre;
 	public static Block blockMithrilOre;
 	public static Block blockSilverOre;
-	public static Block blockBronzeOre;
+	public static Block blockCopperOre;
+	public static Block blockTinOre;
 	public static Block blockPlatinumOre;
 	public static Block blockRubyOre;
 	public static Block blockSapphireOre;
@@ -67,7 +69,9 @@ public class MythologyMod {
 	public static Block blockCelestialBronzeBlock;
 	public static Block blockRubyBlock;
 	public static Block blockSapphireBlock;
-	
+	public static Block blockCopperBlock;
+	public static Block blockTinBlock;
+
 	//Our Mod Items
 	public static Item itemFur;
 	public static Item itemScales;
@@ -86,21 +90,21 @@ public class MythologyMod {
 	};
 	
 		//Setting new toolmaterials
-		static ToolMaterial toolBronze = EnumHelper.addToolMaterial("bronze", 2, 341, 5.0F, 2F, 14);
-		static ToolMaterial toolCelestialBronze = EnumHelper.addToolMaterial("celestialbronze", 2, 453, 6.4F, 3F, 10);
-		static ToolMaterial toolImperialGold = EnumHelper.addToolMaterial("imperialgold", 2, 532, 8F, 5F, 10);
-		static ToolMaterial toolSilver = EnumHelper.addToolMaterial("silver", 2, 332, 5.8F, 4F, 14);
-		static ToolMaterial toolRuby = EnumHelper.addToolMaterial("ruby", 2, 330, 5.0F, 2F, 14);
-		static ToolMaterial toolSapphire = EnumHelper.addToolMaterial("sapphire", 2, 330, 5.0F, 2F, 14);
+		static ToolMaterial toolBronze = EnumHelper.addToolMaterial("BRONZE", 2, 341, 5.0F, 2F, 14);
+		static ToolMaterial toolCelestialBronze = EnumHelper.addToolMaterial("CELESTIALBRONZE", 2, 453, 6.4F, 3F, 10);
+		static ToolMaterial toolImperialGold = EnumHelper.addToolMaterial("IMPERIALGOLD", 2, 532, 8F, 5F, 10);
+		static ToolMaterial toolSilver = EnumHelper.addToolMaterial("SILVER", 2, 332, 5.8F, 4F, 14);
+		static ToolMaterial toolRuby = EnumHelper.addToolMaterial("RUBY", 2, 330, 5.0F, 2F, 14);
+		static ToolMaterial toolSapphire = EnumHelper.addToolMaterial("SAPPHIRE", 2, 330, 5.0F, 2F, 14);
 		
 		//setting new armor materials
-		static ArmorMaterial armorBronze = EnumHelper.addArmorMaterial("armorBronze", 15, new int[]{2, 6, 5, 2}, 15);
-		static ArmorMaterial armorCelestialBronze = EnumHelper.addArmorMaterial("armorCelestialBronze", 25, new int[]{3, 6, 5, 3}, 9);
-		static ArmorMaterial armorImperialGold = EnumHelper.addArmorMaterial("armorImperialGold", 25, new int[]{3, 6, 5, 3}, 9);
-		static ArmorMaterial armorSilver = EnumHelper.addArmorMaterial("armorSilver", 20, new int[]{3, 6, 5, 2}, 20);
-		static ArmorMaterial armorMithril = EnumHelper.addArmorMaterial("armorMithril", 100, new int[]{3, 8, 6, 3}, 10);
-		static ArmorMaterial armorRuby = EnumHelper.addArmorMaterial("armorRuby", 15, new int[]{2, 6, 5, 2}, 20);
-		static ArmorMaterial armorSapphire = EnumHelper.addArmorMaterial("armorSapphire", 15, new int[]{2, 6, 5, 2}, 20);
+		static ArmorMaterial armorBronze = EnumHelper.addArmorMaterial("BRONZE", 15, new int[]{2, 6, 5, 2}, 15);
+		static ArmorMaterial armorCelestialBronze = EnumHelper.addArmorMaterial("CELESTIALBRONZE", 25, new int[]{3, 6, 5, 3}, 9);
+		static ArmorMaterial armorImperialGold = EnumHelper.addArmorMaterial("IMPERIALGOLD", 25, new int[]{3, 6, 5, 3}, 9);
+		static ArmorMaterial armorSilver = EnumHelper.addArmorMaterial("SILVER", 20, new int[]{3, 6, 5, 2}, 20);
+		static ArmorMaterial armorMithril = EnumHelper.addArmorMaterial("MITHRIL", 100, new int[]{3, 8, 6, 3}, 10);
+		static ArmorMaterial armorRuby = EnumHelper.addArmorMaterial("RUBY", 15, new int[]{2, 6, 5, 2}, 20);
+		static ArmorMaterial armorSapphire = EnumHelper.addArmorMaterial("SAPPHIRE", 15, new int[]{2, 6, 5, 2}, 20);
 		
 		
 		//mythical armor
@@ -170,6 +174,8 @@ public class MythologyMod {
 		public static Item hoeSapphire = new ItemHoe(toolSapphire).setUnlocalizedName("hoeSapphire").setCreativeTab(tabMythical).setTextureName(MythologyMod.modid + ":" + "hoeSapphire");
 		
 		//My ingots
+		public static Item itemCopperIngot = new Item().setUnlocalizedName("copperIngot").setCreativeTab(tabMythical).setTextureName("mythical" + ":" + "itemCopperIngot");
+		public static Item itemTinIngot = new Item().setUnlocalizedName("tinIngot").setCreativeTab(tabMythical).setTextureName("mythical" + ":" + "itemTinIngot");
 		public static Item itemBronzeIngot = new Item().setUnlocalizedName("bronzeIngot").setCreativeTab(tabMythical).setTextureName("mythical" + ":" + "itemBronzeIngot");
 		public static Item itemCelestialBronzeIngot = new Item().setUnlocalizedName("celestialBronzeIngot").setCreativeTab(tabMythical).setTextureName("mythical" + ":" + "itemCelestialBronzeIngot");
 		public static Item itemImperialGoldIngot = new Item().setUnlocalizedName("imperialGoldIngot").setCreativeTab(tabMythical).setTextureName("mythical" + ":" + "itemImperialGoldIngot");
@@ -192,8 +198,10 @@ public class MythologyMod {
 		
 		//Defines The Blocks in Minecraft
 		blockMithrilOre = new BlockMithrilOre("oreMithril", tabMythical, Material.rock);
+		blockZincOre = new BlockZincOre("oreZinc", tabMythical, Material.rock);
 		blockSilverOre = new BlockSilverOre("oreSilver", tabMythical, Material.rock);
-		blockBronzeOre = new BlockBronzeOre("oreBronze", tabMythical, Material.rock);
+		blockCopperOre = new BlockCopperOre("oreCopper", tabMythical, Material.rock);
+		blockTinOre = new BlockTinOre("oreTin", tabMythical, Material.rock);
 		blockPlatinumOre = new BlockPlatinumOre("orePlatinum", tabMythical, Material.rock);
 		blockRubyOre = new BlockRubyOre("oreRuby", tabMythical, Material.rock);
 		blockSapphireOre = new BlockSapphireOre("oreSapphire" , tabMythical, Material.rock);
@@ -203,6 +211,8 @@ public class MythologyMod {
 		blockMysticDirt = new BlockMysticDirt("blockMysticDirt", tabMythical, Material.ground);
 		blockSilverBlock = new BlockSilverBlock("silverBlock", tabMythical, Material.iron);
 		blockBronzeBlock = new BlockBronzeBlock("bronzeBlock", tabMythical, Material.iron);
+		blockCopperBlock = new BlockSilverBlock("copperBlock", tabMythical, Material.iron);
+		blockTinBlock = new BlockBronzeBlock("tinBlock", tabMythical, Material.iron);
 		blockPlatinumBlock = new BlockPlatinumBlock("platinumBlock", tabMythical, Material.iron);
 		blockImperialGoldBlock = new BlockImperialGoldBlock("imperialGoldBlock", tabMythical, Material.iron);
 		blockCelestialBronzeBlock = new BlockCelestialBronzeBlock("celestialBronzeBlock", tabMythical, Material.iron);
@@ -217,9 +227,13 @@ public class MythologyMod {
 		itemGnomeBeard = new ItemGnomeBeard("itemGnomeBeard", tabMythical);
 		 
 		//Adds Blocks into Minecraft
+		MythicalDictionary.oreRegistration();
+		
+		GameRegistry.registerBlock(blockZincOre, "oreZinc");
 		GameRegistry.registerBlock(blockMithrilOre, "oreMithril");
 		GameRegistry.registerBlock(blockSilverOre, "oreSilver");
-		GameRegistry.registerBlock(blockBronzeOre, "oreBronze");
+		GameRegistry.registerBlock(blockCopperOre, "oreCopper");
+		GameRegistry.registerBlock(blockTinOre, "oreTin");
 		GameRegistry.registerBlock(blockPlatinumOre, "orePlatinum");
 		GameRegistry.registerBlock(blockRubyOre, "oreRuby");
 		GameRegistry.registerBlock(blockSapphireOre, "oreSapphire");
@@ -234,6 +248,9 @@ public class MythologyMod {
 		GameRegistry.registerBlock(blockSilverBlock, "blockSilverBlock");
 		GameRegistry.registerBlock(blockRubyBlock, "blockRubyBlock");
 		GameRegistry.registerBlock(blockSapphireBlock, "blockSapphireBlock");
+		GameRegistry.registerBlock(blockCopperBlock, "blockCopperBlock");
+		GameRegistry.registerBlock(blockTinBlock, "blockTinBlock");
+
 		//Adds Items into Minecraft
     	GameRegistry.registerItem(swordBronze, "swordBronze"); 
     	GameRegistry.registerItem(swordCelestialBronze, "swordCelestialBronze"); 
@@ -265,6 +282,8 @@ public class MythologyMod {
     	GameRegistry.registerItem(hoeSilver, "hoeSilver"); 
     	GameRegistry.registerItem(hoeRuby, "hoeRuby");
     	GameRegistry.registerItem(hoeSapphire, "hoeSapphire");
+    	GameRegistry.registerItem(itemCopperIngot, "copperIngot");
+    	GameRegistry.registerItem(itemTinIngot, "tinIngot");
     	GameRegistry.registerItem(itemBronzeIngot, "bronzeIngot"); 
     	GameRegistry.registerItem(itemCelestialBronzeIngot, "celestialBronzeIngot"); 
     	GameRegistry.registerItem(itemImperialGoldIngot, "imperialGoldIngot"); 
@@ -344,7 +363,10 @@ public class MythologyMod {
         
         EntityList.entityEggs.put(Integer.valueOf(randomIDFairy), new EntityList.EntityEggInfo(randomIDFairy, 0x07FA10, 0xE9F5E9));
         //recipes
+        
         MythicalRecipes.addMythicalRecipes();
+
+        
         //Proxy
         proxy.RenderEntity();
 
