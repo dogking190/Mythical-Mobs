@@ -2,14 +2,14 @@
 {
   "modid": "mythical",
   "name": "Mythical Creatures",
-  "description": "Making Minecraft more Magical, with Mythical Beasts! -GMM reference by thedoctor3141, hehe",
+  "description": "Making Minecraft more Magical, with Mythical Beasts!",
   "version": "Alpha 1.0",
-  "credits": "Created by Light Yagami, Kungfumidget, Dogking190, thedoctor3141, and some models by Berican",
+  "credits": "Original idea by xxOutsidexx",
   "logoFile": "/gfx/buildcraft/logo.png",
   "mcversion": "1.7.2",
   "url": "http://www.mod-buildcraft.com/",
   "updateUrl": "",
-  "authorList": [ "Kungfumidget", "KeeperofMee", "Dogking190", "thedoctor3141"],
+  "authorList": [ "Kungfumidget", "KeeperofMee", "Dogking190", "thedoctor3141", "Jakobhh", "LRA_10", "ultimateLukas"],
   "parent":"",
   "screenshots": []
 }
